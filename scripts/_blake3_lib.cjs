@@ -1,0 +1,17 @@
+// Verified BLAKE3 (reference_impl port), exported for reuse by other harness scripts.
+const IV = new Uint32Array([0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19]);
+const CHUNK_START=1,CHUNK_END=2,PARENT=4,ROOT=8,BLOCK_LEN=64,CHUNK_LEN=1024;
+const MSG_PERMUTATION=[2,6,3,10,7,0,4,13,1,11,12,5,9,14,15,8];
+function rotr(x,n){return ((x>>>n)|(x<<(32-n)))>>>0;}
+function g(s,a,b,c,d,mx,my){s[a]=(s[a]+s[b]+mx)>>>0;s[d]=rotr((s[d]^s[a])>>>0,16);s[c]=(s[c]+s[d])>>>0;s[b]=rotr((s[b]^s[c])>>>0,12);s[a]=(s[a]+s[b]+my)>>>0;s[d]=rotr((s[d]^s[a])>>>0,8);s[c]=(s[c]+s[d])>>>0;s[b]=rotr((s[b]^s[c])>>>0,7);}
+function roundFn(s,m){g(s,0,4,8,12,m[0],m[1]);g(s,1,5,9,13,m[2],m[3]);g(s,2,6,10,14,m[4],m[5]);g(s,3,7,11,15,m[6],m[7]);g(s,0,5,10,15,m[8],m[9]);g(s,1,6,11,12,m[10],m[11]);g(s,2,7,8,13,m[12],m[13]);g(s,3,4,9,14,m[14],m[15]);}
+function permute(m){const o=new Uint32Array(16);for(let i=0;i<16;i++)o[i]=m[MSG_PERMUTATION[i]];return o;}
+function compress(cv,bw,cLo,cHi,bl,flags){const s=new Uint32Array(16);for(let i=0;i<8;i++)s[i]=cv[i];s[8]=IV[0];s[9]=IV[1];s[10]=IV[2];s[11]=IV[3];s[12]=cLo>>>0;s[13]=cHi>>>0;s[14]=bl>>>0;s[15]=flags>>>0;let m=bw;for(let r=0;r<7;r++){roundFn(s,m);if(r<6)m=permute(m);}for(let i=0;i<8;i++){s[i]=(s[i]^s[i+8])>>>0;s[i+8]=(s[i+8]^cv[i])>>>0;}return s;}
+function first8(s){const o=new Uint32Array(8);for(let i=0;i<8;i++)o[i]=s[i];return o;}
+function wordsFromBlock(block,offset,len){const m=new Uint32Array(16);const limit=offset+len;for(let i=0;i<16;i++){const j=offset+i*4;let w=0;if(j<limit){const b0=block[j],b1=j+1<limit?block[j+1]:0,b2=j+2<limit?block[j+2]:0,b3=j+3<limit?block[j+3]:0;w=(b0|(b1<<8)|(b2<<16)|(b3<<24))>>>0;}m[i]=w;}return m;}
+function chunkOutput(input,start,length,chunkCounter){let cv=first8(IV);const cLo=chunkCounter>>>0,cHi=Math.floor(chunkCounter/0x100000000)>>>0;let bc=Math.floor((length+BLOCK_LEN-1)/BLOCK_LEN);if(bc===0)bc=1;for(let b=0;b<bc-1;b++){const bs=start+b*BLOCK_LEN,rem=length-b*BLOCK_LEN,tl=rem>=BLOCK_LEN?BLOCK_LEN:rem;const m=wordsFromBlock(input,bs,tl);let f=0;if(b===0)f|=CHUNK_START;cv=first8(compress(cv,m,cLo,cHi,tl,f));}const lb=bc-1,bs=start+lb*BLOCK_LEN,rem=length-lb*BLOCK_LEN,tl=rem>=BLOCK_LEN?BLOCK_LEN:(rem>0?rem:0);const m=wordsFromBlock(input,bs,tl);let f=CHUNK_END;if(lb===0)f|=CHUNK_START;return {cv,m,cLo,cHi,bl:tl,flags:f};}
+function cvOf(o){return first8(compress(o.cv,o.m,o.cLo,o.cHi,o.bl,o.flags));}
+function rootBytes(o){const s=compress(o.cv,o.m,0,0,o.bl,o.flags|ROOT);const out=new Uint8Array(32);for(let i=0;i<8;i++){const w=s[i]>>>0;out[i*4]=w&255;out[i*4+1]=(w>>>8)&255;out[i*4+2]=(w>>>16)&255;out[i*4+3]=(w>>>24)&255;}return out;}
+function parentOutput(l,r){const m=new Uint32Array(16);for(let i=0;i<8;i++){m[i]=l[i];m[i+8]=r[i];}return {cv:first8(IV),m,cLo:0,cHi:0,bl:BLOCK_LEN,flags:PARENT};}
+function blake3(input){const total=input.length;const chunkCount=total===0?1:Math.floor((total+CHUNK_LEN-1)/CHUNK_LEN);const stack=[];let chunksSoFar=0;for(let c=0;c<chunkCount-1;c++){const start=c*CHUNK_LEN,len=Math.min(CHUNK_LEN,total-start);let cv=cvOf(chunkOutput(input,start,len,c));chunksSoFar+=1;let t=chunksSoFar;while((t&1)===0){cv=cvOf(parentOutput(stack.pop(),cv));t>>=1;}stack.push(cv);}const lastStart=(chunkCount-1)*CHUNK_LEN,lastLen=total===0?0:Math.min(CHUNK_LEN,total-lastStart);let output=chunkOutput(input,lastStart,lastLen,chunkCount-1);while(stack.length>0){output=parentOutput(stack.pop(),cvOf(output));}return rootBytes(output);}
+module.exports = { blake3 };

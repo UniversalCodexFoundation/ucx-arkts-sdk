@@ -1,0 +1,16 @@
+# HarmonyOS / ArkTS 构建产物
+/build/
+/.build/
+/.preview/
+/oh_modules/
+*.har
+dist/
+
+# Node（仅用于 scripts/ 下的逐位验证脚本）
+node_modules/
+
+# OS / 编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

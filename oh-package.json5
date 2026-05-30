@@ -1,0 +1,31 @@
+{
+  // Unicodex UCX ArkTS SDK —— HarmonyOS HAR 包清单（oh-package.json5）。
+  //
+  // 命名体现 unicodex / ucx；version 遵循 ADR-012 版本号方案：
+  //   X.Y = 所支持的 UCX 标准版本（前两位相同 = API 相同），Z = SDK 补丁号。
+  //   当前 0.4.0 对应 UCX 标准 0.4.x（见 README「版本号说明 / Versioning」小节）。
+  //
+  // 入口（main / types）指向公开 API 统一导出 Index.ets。本 SDK 为**纯 ArkTS** 实现，
+  // 无原生 crypto 依赖，可在任意 ArkTS 运行时工作（dependencies 为空）。
+  name: "@unicodex/ucx",
+  version: "0.4.0",
+  description: "Unicodex UCX 小说容器格式的纯 ArkTS 只读 SDK：解析 + 完整性校验 + 双层 Ed25519 验签 + UCXE 解密（AES-GCM/CBC、ChaCha20-Poly1305、Argon2id/PBKDF2）。无原生依赖。",
+  main: "src/main/ets/ucx/Index.ets",
+  types: "src/main/ets/ucx/Index.ets",
+  author: "Unicodex Team",
+  license: "MIT OR Apache-2.0",
+  keywords: [
+    "unicodex",
+    "ucx",
+    "ebook",
+    "novel",
+    "ed25519",
+    "blake3",
+    "argon2id",
+    "aes-gcm",
+    "chacha20-poly1305",
+    "harmonyos",
+    "arkts"
+  ],
+  dependencies: {}
+}
