@@ -1,3 +1,5 @@
+[English](README_en.md) | 中文
+
 # Unicodex UCX ArkTS SDK
 
 纯 **ArkTS** 实现的 Unicodex UCX 小说容器格式只读 SDK，面向 **HarmonyOS / OpenHarmony**。
