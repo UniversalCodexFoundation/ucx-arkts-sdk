@@ -17,7 +17,7 @@
 import { blake3 } from './blake3';
 import { ZipView } from './zip';
 import { Manifest, IntegrityResult, IntegrityEntry } from './types';
-import { toBase64 } from './util';
+import { toBase64, fromBase64, constantTimeEqual } from './util';
 
 /** 计算字节的 BLAKE3 并编码为 standard Base64（padded）。 */
 export function blake3Base64(bytes: Uint8Array): string {
@@ -38,8 +38,11 @@ export function verifyIntegrity(zip: ZipView, manifest: Manifest): IntegrityResu
       allValid = false;
       continue;
     }
-    const actual: string = blake3Base64(data);
-    const valid: boolean = actual === me.digest;
+    // [CT-DIGEST] 使用常量时间比较摘要字节，防止计时侧信道泄露哈希值。
+    const actualBytes: Uint8Array = blake3(data);
+    const actual: string = toBase64(actualBytes);
+    const expectedBytes: Uint8Array = fromBase64(me.digest);
+    const valid: boolean = constantTimeEqual(actualBytes, expectedBytes);
     if (!valid) {
       allValid = false;
     }

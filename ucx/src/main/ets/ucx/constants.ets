@@ -77,6 +77,8 @@ export const ARGON2_MAX_MEM_KIB: number = 4194304;
 export const ARGON2_MIN_TIME: number = 2;
 export const ARGON2_MAX_TIME: number = 100;
 export const ARGON2_MIN_PARALLELISM: number = 1;
+/** Argon2id 并行度上限（参考 Argon2 C 库 uint8 限制，同时约束移动端内存）。 */
+export const ARGON2_MAX_PARALLELISM: number = 255;
 // PBKDF2 迭代边界（见 UCX-FORMAT §8.2）
 export const PBKDF2_MIN_ITERS: number = 100000;
 export const PBKDF2_MAX_ITERS: number = 10000000;

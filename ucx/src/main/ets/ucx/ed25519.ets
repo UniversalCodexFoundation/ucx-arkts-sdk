@@ -22,6 +22,8 @@
  * ArkTS 注意：禁 any；字段元素用 bigint，字节用 Uint8Array。
  */
 
+import { constantTimeEqual } from './util';
+
 // ── SHA-512（FIPS 180-4），64-bit 字用 lo/hi 拆分 ────────────────────────────
 
 const SHA512_K_HI: Uint32Array = new Uint32Array([
@@ -434,12 +436,8 @@ export function ed25519Verify(message: Uint8Array, signature: Uint8Array, public
   const kA: Point = scalarMul(k, A);
   const rhs: Point = pointAdd(R, kA);
 
+  // [CT-DIGEST] 使用常量时间比较编码点，防止计时侧信道泄露验签内部状态。
   const lhsEnc: Uint8Array = encodePoint(sB);
   const rhsEnc: Uint8Array = encodePoint(rhs);
-  for (let i = 0; i < 32; i++) {
-    if (lhsEnc[i] !== rhsEnc[i]) {
-      return false;
-    }
-  }
-  return true;
+  return constantTimeEqual(lhsEnc, rhsEnc);
 }

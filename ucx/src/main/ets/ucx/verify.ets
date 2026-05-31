@@ -37,7 +37,7 @@ import {
   parseEcBlob, EcBlob, extractSfManifestDigest,
   locateL2Block, L2Location, parseL2Signers, L2Signer, computeL2ProtectedDigest,
 } from './signature';
-import { toBase64, fromBase64, toHex, utf8Decode, bytesEqual, constantTimeEqual } from './util';
+import { fromBase64, toHex, utf8Decode, constantTimeEqual } from './util';
 
 /**
  * 解码 PEM（CERTIFICATE 标签）为 DER 字节；失败返回 null。
@@ -116,10 +116,15 @@ function verifyL1Signer(zip: ZipView, signerId: string, nowMs: number): L1Result
   }
 
   // 2) digest_matches：Base64(BLAKE3(MANIFEST.MF)) == SF 的 BLAKE3-Digest-Manifest。
-  const manifestDigest: string = toBase64(blake3(manifestBytes));
+  // [CT-DIGEST] 使用常量时间比较，防止计时侧信道泄露摘要内容。
+  const manifestDigestBytes: Uint8Array = blake3(manifestBytes);
   const sfText: string = utf8Decode(sfBytes);
   const sfDigest: string | null = extractSfManifestDigest(sfText);
-  const digestMatches: boolean = sfDigest !== null && sfDigest === manifestDigest;
+  let digestMatches: boolean = false;
+  if (sfDigest !== null) {
+    const sfDigestBytes: Uint8Array | null = fromBase64(sfDigest);
+    digestMatches = sfDigestBytes !== null && constantTimeEqual(sfDigestBytes, manifestDigestBytes);
+  }
 
   // 3) sig_valid：用 .EC 内证书的 Ed25519 公钥验签 over .SF 原始字节。
   const ec: EcBlob | null = parseEcBlob(ecBytes);
@@ -139,11 +144,12 @@ function verifyL1Signer(zip: ZipView, signerId: string, nowMs: number): L1Result
       certTimeValid = cert.isTimeValid(nowMs);
 
       // 5) cert-PEM 交叉校验（若存在）。
+      // [CT-DIGEST] 使用常量时间比较证书 DER 字节，防止计时侧信道。
       const pemBytes: Uint8Array | undefined = zip.get(pemName);
       if (pemBytes !== undefined) {
         const pemText: string = utf8Decode(pemBytes);
         const pemDer: Uint8Array | null = pemToDer(pemText, 'CERTIFICATE');
-        certPemMatch = pemDer !== null && bytesEqual(pemDer, ec.certDer);
+        certPemMatch = pemDer !== null && constantTimeEqual(pemDer, ec.certDer);
       }
     }
   }

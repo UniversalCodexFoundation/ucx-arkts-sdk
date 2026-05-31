@@ -23,7 +23,8 @@ import { utf8Encode } from './util';
 import {
   KDF_NONE, KDF_ARGON2ID, KDF_PBKDF2_HMAC_SHA256,
   ARGON2_MIN_MEM_KIB, ARGON2_MAX_MEM_KIB, ARGON2_MIN_TIME, ARGON2_MAX_TIME,
-  ARGON2_MIN_PARALLELISM, PBKDF2_MIN_ITERS, PBKDF2_MAX_ITERS, SALT_LEN,
+  ARGON2_MIN_PARALLELISM, ARGON2_MAX_PARALLELISM,
+  PBKDF2_MIN_ITERS, PBKDF2_MAX_ITERS, SALT_LEN,
 } from './constants';
 
 /** 解析后的 KDF 参数（按 KDF id 不同携带不同字段）。 */
@@ -72,6 +73,11 @@ export function validateKdfParams(params: KdfParams): boolean {
     if (params.parallelism < ARGON2_MIN_PARALLELISM) {
       return false;
     }
+    // [ARGON2-BOUND] parallelism 上限为 255（参考 Argon2 C 库的 uint8 限制），
+    // 同时也是移动端内存安全的合理上界。
+    if (params.parallelism > ARGON2_MAX_PARALLELISM) {
+      return false;
+    }
     return true;
   }
   if (params.kdfId === KDF_PBKDF2_HMAC_SHA256) {
@@ -109,6 +115,8 @@ export function deriveKeyFromPassphrase(
   salt: Uint8Array,
   dkLen: number,
 ): Uint8Array | null {
+  // [SALT-VALIDATE] 验证实际 salt 长度与协议规定的 SALT_LEN (16) 一致，
+  // 防止头部篡改后传入非标准长度的 salt 导致密钥派生结果不可预测。
   if (salt.length !== SALT_LEN) {
     return null;
   }

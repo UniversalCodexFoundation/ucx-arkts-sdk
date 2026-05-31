@@ -197,6 +197,11 @@ export function parseL2Signers(block: Uint8Array): L2Signer[] | null {
   let o: number = 8; // 跳过 leading size_of_block
   const pairSize: number = readU64LE(block, o);
   o += 8;
+  // [PAIRSIZE-GUARD] 验证 pairSize >= 4（至少容纳 pair_id），
+  // 并且值在 JS 安全整数范围内（防止 u64 溢出后产生错误的 signersLen）。
+  if (pairSize < 4 || pairSize > Number.MAX_SAFE_INTEGER) {
+    return null;
+  }
   const pairId: number = readU32LE(block, o);
   o += 4;
   if (pairId !== L2_PAIR_ID) {

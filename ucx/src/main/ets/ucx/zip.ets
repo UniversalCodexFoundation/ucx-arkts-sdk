@@ -193,6 +193,11 @@ export function readZip(data: Uint8Array): ZipView {
     const commentLen: number = readU16LE(data, p + 32);
     const localOffset: number = readU32LE(data, p + 42);
 
+    // [PAIRSIZE-GUARD] 验证 localOffset 在数据范围内，防止越界访问。
+    if (localOffset >= data.length) {
+      throw new InvalidFormatError('ZIP: local header offset out of bounds');
+    }
+
     const nameBytes: Uint8Array = data.subarray(p + 46, p + 46 + nameLen);
     const name: string = utf8Decode(nameBytes);
 

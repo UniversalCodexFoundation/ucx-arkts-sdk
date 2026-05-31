@@ -370,8 +370,10 @@ function decryptChunked(h: UcxeHeader, key: Uint8Array, aad: Uint8Array): Uint8A
   let o: number = 0;
   const chunkCount: number = readU32LE(stream, o);
   o += 4;
-  // 防御性上界：chunk 数不超过载荷字节数。
-  if (chunkCount > stream.length) {
+  // [CHUNK-COUNT-BOUND] 防御性上界：chunk 数不超过载荷字节数，
+  // 且硬上限为 16777216（16M 块，对应约 16 TiB 明文），防止恶意 chunk_count 导致 DoS。
+  const CHUNK_COUNT_HARD_CAP: number = 16777216;
+  if (chunkCount > stream.length || chunkCount > CHUNK_COUNT_HARD_CAP) {
     return null;
   }
 
