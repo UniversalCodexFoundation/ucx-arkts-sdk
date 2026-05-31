@@ -2,12 +2,18 @@
 /build/
 /.build/
 /.preview/
+/.hvigor/
 /oh_modules/
+/ucx/build/
+/ucx/BuildProfile.ets
 *.har
 dist/
 
 # Node（仅用于 scripts/ 下的逐位验证脚本）
 node_modules/
+
+# npm 配置（ohpm install 自动生成）
+.npmrc
 
 # OS / 编辑器
 .DS_Store
