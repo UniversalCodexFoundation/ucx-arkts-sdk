@@ -209,15 +209,22 @@ export function bytesEqual(a: Uint8Array, b: Uint8Array): boolean {
 /**
  * 常量时间字节相等比较。
  * 用于认证标签（HMAC / GCM tag）校验，避免按字节短路造成的计时侧信道。
- * 长度不同直接返回 false（长度本身不是机密）。
+ *
+ * [P1 constant-time] 当长度不同时，仍然遍历较短数组的长度进行 XOR，
+ * 避免通过执行时间差异泄露长度信息。最后将长度不匹配标记为不等。
+ * 虽然在当前协议中标签长度由算法固定（攻击者无法控制），
+ * 但函数签名承诺常量时间语义，实现应兑现承诺。
  */
 export function constantTimeEqual(a: Uint8Array, b: Uint8Array): boolean {
-  if (a.length !== b.length) {
-    return false;
-  }
+  const minLen: number = Math.min(a.length, b.length);
   let diff: number = 0;
-  for (let i = 0; i < a.length; i++) {
+  // 遍历较短长度，对每个字节做 XOR 累积。
+  for (let i = 0; i < minLen; i++) {
     diff |= a[i] ^ b[i];
+  }
+  // 长度不同 -> 设置 diff 非零。
+  if (a.length !== b.length) {
+    diff |= 1;
   }
   return diff === 0;
 }

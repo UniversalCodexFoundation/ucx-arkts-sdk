@@ -37,9 +37,14 @@ import {
   parseEcBlob, EcBlob, extractSfManifestDigest,
   locateL2Block, L2Location, parseL2Signers, L2Signer, computeL2ProtectedDigest,
 } from './signature';
-import { toBase64, toHex, utf8Decode, bytesEqual, constantTimeEqual } from './util';
+import { toBase64, fromBase64, toHex, utf8Decode, bytesEqual, constantTimeEqual } from './util';
 
-/** 解码 PEM（CERTIFICATE 标签）为 DER 字节；失败返回 null。 */
+/**
+ * 解码 PEM（CERTIFICATE 标签）为 DER 字节；失败返回 null。
+ *
+ * [P2 de-duplicate] 使用 util.fromBase64 替代原先内联的 base64DecodeStandard，
+ * 消除重复的 Base64 解码实现（audit finding: verify.ets:64 重复 Base64 解码）。
+ */
 function pemToDer(pem: string, label: string): Uint8Array | null {
   const begin: string = `-----BEGIN ${label}-----`;
   const end: string = `-----END ${label}-----`;
@@ -57,45 +62,7 @@ function pemToDer(pem: string, label: string): Uint8Array | null {
       b64 += c;
     }
   }
-  return base64DecodeStandard(b64);
-}
-
-/** standard Base64 解码（用于 PEM body）。复用 util 的字母表逻辑这里内联以避免额外导出。 */
-function base64DecodeStandard(s: string): Uint8Array {
-  const lookup: Int16Array = new Int16Array(256);
-  lookup.fill(-1);
-  const alpha: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-  for (let i = 0; i < alpha.length; i++) {
-    lookup[alpha.charCodeAt(i)] = i;
-  }
-  let count: number = 0;
-  for (let i = 0; i < s.length; i++) {
-    const c: number = s.charCodeAt(i);
-    if (c === 0x3d) break;
-    if (c < 256 && lookup[c] >= 0) count++;
-  }
-  const outLen: number = Math.floor((count * 6) / 8);
-  const out: Uint8Array = new Uint8Array(outLen);
-  let bits: number = 0;
-  let acc: number = 0;
-  let oi: number = 0;
-  for (let i = 0; i < s.length; i++) {
-    const c: number = s.charCodeAt(i);
-    if (c === 0x3d) break;
-    if (c >= 256) continue;
-    const v: number = lookup[c];
-    if (v < 0) continue;
-    acc = (acc << 6) | v;
-    bits += 6;
-    if (bits >= 8) {
-      bits -= 8;
-      if (oi < outLen) {
-        out[oi] = (acc >> bits) & 0xff;
-        oi++;
-      }
-    }
-  }
-  return out;
+  return fromBase64(b64);
 }
 
 /** 证书指纹：lowercase-hex BLAKE3(certDER)。 */

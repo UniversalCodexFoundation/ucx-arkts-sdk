@@ -29,7 +29,7 @@ import {
   KDF_NONE, KDF_ARGON2ID, KDF_PBKDF2_HMAC_SHA256,
   AEAD_NONCE_LEN, CBC_IV_LEN, GCM_TAG_LEN, CHACHA_TAG_LEN, CBC_MAC_LEN,
 } from './constants';
-import { readU16LE, readU32LE, readU64LE, concatBytes, u32be, sliceCopy } from './util';
+import { readU16LE, readU32LE, readU64LE, concatBytes, u32be, u32le, sliceCopy } from './util';
 import { aesGcmDecrypt } from './aes';
 import { chacha20Poly1305Decrypt } from './chacha20poly1305';
 import { aesCbcHmacDecrypt } from './cbc';
@@ -250,6 +250,14 @@ export function decryptWithKey(data: Uint8Array, key: Uint8Array): Uint8Array | 
  * 用口令解密 UCXE（KDF≠None）。口令在 KDF 内部做 NFC 归一化。
  * @returns 明文，或 null（任何失败）。
  */
+/**
+ * 用口令解密 UCXE（KDF不等于None）。口令在 KDF 内部做 NFC 归一化。
+ *
+ * [P1 key-zeroing] 解密完成后对派生密钥进行 best-effort 清零（fill(0)），
+ * 减少密钥材料在内存中的残留时间。
+ *
+ * @returns 明文，或 null（任何失败）。
+ */
 export function decryptWithPassphrase(data: Uint8Array, passphrase: string): Uint8Array | null {
   const h: UcxeHeader | null = parseUcxe(data);
   if (h === null) {
@@ -274,12 +282,22 @@ export function decryptWithPassphrase(data: Uint8Array, passphrase: string): Uin
     return null;
   }
 
+  let result: Uint8Array | null;
   if (isCbc) {
     const encKey: Uint8Array = sliceCopy(derived, 0, 32);
     const macKey: Uint8Array = sliceCopy(derived, 32, 64);
-    return aesCbcHmacDecrypt(encKey, macKey, h.iv, h.ciphertext, h.tag, h.header8);
+    result = aesCbcHmacDecrypt(encKey, macKey, h.iv, h.ciphertext, h.tag, h.header8);
+    // [P1 key-zeroing] 清零 CBC 子密钥。
+    encKey.fill(0);
+    macKey.fill(0);
+  } else {
+    result = decryptAead(h, derived);
   }
-  return decryptAead(h, derived);
+
+  // [P1 key-zeroing] 清零派生密钥。
+  derived.fill(0);
+
+  return result;
 }
 
 /**
@@ -332,6 +350,14 @@ function aeadDecryptOne(
  * 每块 nonce = base_nonce[0..8] ‖ u32_be(chunk_index)（拼接，非 XOR）；
  * AAD 与文件级 AAD 相同（每块都用）。任一块失败即整体失败。
  */
+/**
+ * 分块 AEAD 解密（UCX-FORMAT §7.7）。
+ *
+ * [P0 anti-truncation] 关键安全措施：chunk_aad = file_aad || u32_le(chunk_count)。
+ * 将总分块数绑定到每个分块的 AAD 中，防止攻击者通过删除末尾分块并篡改
+ * chunk_count 字段来截断密文而不被检测到。
+ * 参考 Rust 实现：ucx-crypto/src/chunked.rs:135-140 build_chunk_aad()。
+ */
 function decryptChunked(h: UcxeHeader, key: Uint8Array, aad: Uint8Array): Uint8Array | null {
   // 分块仅支持 AEAD（GCM / ChaCha20）；base nonce 必须 12 字节。
   if (h.iv.length !== AEAD_NONCE_LEN) {
@@ -348,6 +374,11 @@ function decryptChunked(h: UcxeHeader, key: Uint8Array, aad: Uint8Array): Uint8A
   if (chunkCount > stream.length) {
     return null;
   }
+
+  // [P0 anti-truncation] 构造 chunk_aad = file_aad || u32_le(chunk_count)。
+  // 将 chunk_count 的 4 字节小端表示追加到 file-level AAD，
+  // 使得每个分块的 AEAD 认证都绑定了总分块数。
+  const chunkAad: Uint8Array = concatBytes([aad, u32le(chunkCount)]);
 
   const parts: Uint8Array[] = [];
   const base: Uint8Array = h.iv;
@@ -370,7 +401,8 @@ function decryptChunked(h: UcxeHeader, key: Uint8Array, aad: Uint8Array): Uint8A
     nonce.set(base.subarray(0, 8), 0);
     nonce.set(u32be(i), 8);
 
-    const pt: Uint8Array | null = aeadDecryptOne(h.algorithm, key, nonce, ct, tag, aad);
+    // 使用 chunkAad（含 chunk_count）而非原始 aad。
+    const pt: Uint8Array | null = aeadDecryptOne(h.algorithm, key, nonce, ct, tag, chunkAad);
     if (pt === null) {
       return null;
     }

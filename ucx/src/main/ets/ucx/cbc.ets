@@ -71,9 +71,13 @@ export function aesCbcHmacDecrypt(
 }
 
 /**
- * PKCS#7 去填充。
+ * PKCS#7 去填充（常量时间验证）。
  * 最后一个字节 n（1..16）给出 padding 长度；末尾 n 个字节都必须等于 n。
  * 任何不符返回 null。
+ *
+ * [P2 constant-time-unpad] 使用常量时间逻辑验证 padding 字节，
+ * 不在循环中提前返回。虽然 HMAC 验证在 CBC 解密前已以常量时间完成
+ *（攻击者无法触达 padding 校验），但作为纵深防御仍改为常量时间。
  */
 function pkcs7Unpad(data: Uint8Array): Uint8Array | null {
   const len: number = data.length;
@@ -84,10 +88,13 @@ function pkcs7Unpad(data: Uint8Array): Uint8Array | null {
   if (pad < 1 || pad > 16 || pad > len) {
     return null;
   }
+  // 常量时间校验所有填充字节是否等于 pad。
+  let diff: number = 0;
   for (let i = len - pad; i < len; i++) {
-    if (data[i] !== pad) {
-      return null;
-    }
+    diff |= data[i] ^ pad;
+  }
+  if (diff !== 0) {
+    return null;
   }
   const out: Uint8Array = new Uint8Array(len - pad);
   out.set(data.subarray(0, len - pad));

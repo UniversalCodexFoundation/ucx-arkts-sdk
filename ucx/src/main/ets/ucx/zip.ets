@@ -196,6 +196,11 @@ export function readZip(data: Uint8Array): ZipView {
     const nameBytes: Uint8Array = data.subarray(p + 46, p + 46 + nameLen);
     const name: string = utf8Decode(nameBytes);
 
+    // [P0 Zip-Slip] 对每个条目名执行安全路径验证，
+    // 拒绝路径遍历、绝对路径、控制字符、Windows 保留设备名等。
+    // 参考 Rust: ucx-types/src/path_safety.rs validate_safe_relative_path()。
+    validateSafePath(name);
+
     const content: Uint8Array = extractEntry(
       data, localOffset, compression, compSize, uncompSize,
     );
@@ -206,4 +211,103 @@ export function readZip(data: Uint8Array): ZipView {
   }
 
   return new ZipView(entries, order, data);
+}
+
+/**
+ * Windows 保留设备名集合（大写）。
+ * 这些名字无论大小写、无论是否带扩展名，在 Windows 上都会被解析为设备。
+ */
+const WINDOWS_RESERVED_NAMES: string[] = [
+  'CON', 'PRN', 'AUX', 'NUL',
+  'COM1', 'COM2', 'COM3', 'COM4', 'COM5', 'COM6', 'COM7', 'COM8', 'COM9',
+  'LPT1', 'LPT2', 'LPT3', 'LPT4', 'LPT5', 'LPT6', 'LPT7', 'LPT8', 'LPT9',
+];
+
+/**
+ * 验证 ZIP 条目路径是安全的相对路径，拒绝可用于 Zip-Slip 攻击的恶意路径。
+ *
+ * 参考 Rust 实现：ucx-types/src/path_safety.rs:97-170 validate_safe_relative_path()。
+ *
+ * 拒绝条件：
+ * 1. 空字符串
+ * 2. 包含 code < 0x20 的控制字符（含 NUL）
+ * 3. 包含反斜杠 '\\'
+ * 4. 以 '/' 开头（POSIX 绝对路径）
+ * 5. 第二个字符是 ':'（Windows 驱动器前缀，如 "C:/"）
+ * 6. 任何路径段等于 ".."（父目录遍历）
+ * 7. 任何路径段匹配 Windows 保留设备名（大小写不敏感，带或不带扩展名）
+ * 8. 任何路径段以 '.' 或 ' ' 结尾（单独的 "." 段允许）
+ *
+ * @param path ZIP 条目名
+ * @throws InvalidFormatError 当路径不安全时
+ */
+function validateSafePath(path: string): void {
+  // 1) 空字符串。
+  if (path.length === 0) {
+    throw new InvalidFormatError('ZIP: empty entry name');
+  }
+
+  // 2) 控制字符（code < 0x20）。
+  for (let i = 0; i < path.length; i++) {
+    if (path.charCodeAt(i) < 0x20) {
+      throw new InvalidFormatError(`ZIP: entry name contains control character: ${path}`);
+    }
+  }
+
+  // 3) 反斜杠。
+  if (path.indexOf('\\') >= 0) {
+    throw new InvalidFormatError(`ZIP: entry name contains backslash: ${path}`);
+  }
+
+  // 4) 以 '/' 开头（POSIX 绝对路径）。
+  if (path.charAt(0) === '/') {
+    throw new InvalidFormatError(`ZIP: entry name is absolute path: ${path}`);
+  }
+
+  // 5) Windows 驱动器前缀（第二个字符是 ':'，第一个是 ASCII 字母）。
+  if (path.length >= 2 && path.charAt(1) === ':') {
+    const first: number = path.charCodeAt(0);
+    // 'A'=65, 'Z'=90, 'a'=97, 'z'=122
+    if ((first >= 65 && first <= 90) || (first >= 97 && first <= 122)) {
+      throw new InvalidFormatError(`ZIP: entry name has Windows drive prefix: ${path}`);
+    }
+  }
+
+  // 逐段验证（以 '/' 分割）。
+  const segments: string[] = path.split('/');
+  for (let i = 0; i < segments.length; i++) {
+    const seg: string = segments[i];
+    // 空段（连续 '//'）跳过。
+    if (seg.length === 0) {
+      continue;
+    }
+
+    // 6) 父目录遍历。
+    if (seg === '..') {
+      throw new InvalidFormatError(`ZIP: entry name contains '..': ${path}`);
+    }
+
+    // 7) Windows 保留设备名（大小写不敏感）。
+    // 先尝试完整段名，再尝试去掉扩展名后的 stem。
+    const upperSeg: string = seg.toUpperCase();
+    if (WINDOWS_RESERVED_NAMES.indexOf(upperSeg) >= 0) {
+      throw new InvalidFormatError(`ZIP: entry name contains reserved device name: ${path}`);
+    }
+    // 带扩展名的保留名：如 "CON.txt" -> stem "CON"。
+    const dotIdx: number = upperSeg.indexOf('.');
+    if (dotIdx >= 0) {
+      const stem: string = upperSeg.substring(0, dotIdx);
+      if (WINDOWS_RESERVED_NAMES.indexOf(stem) >= 0) {
+        throw new InvalidFormatError(`ZIP: entry name contains reserved device name: ${path}`);
+      }
+    }
+
+    // 8) 段末尾的 '.' 或 ' '（单独的 "." 允许）。
+    if (seg !== '.') {
+      const lastChar: string = seg.charAt(seg.length - 1);
+      if (lastChar === '.' || lastChar === ' ') {
+        throw new InvalidFormatError(`ZIP: entry name segment ends with dot or space: ${path}`);
+      }
+    }
+  }
 }
