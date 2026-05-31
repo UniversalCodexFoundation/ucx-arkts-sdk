@@ -1,0 +1,1 @@
+{"name":"@unicodex/ucx","version":"0.4.0","description":"Unicodex UCX -- ArkTS HAR module","main":"src/main/ets/ucx/Index.ets","types":"src/main/ets/ucx/Index.ets","author":"Unicodex Team","license":"MIT OR Apache-2.0","keywords":["unicodex","ucx","ebook","novel","ed25519","blake3","argon2id","aes-gcm","chacha20-poly1305","harmonyos","arkts"],"dependencies":{}}

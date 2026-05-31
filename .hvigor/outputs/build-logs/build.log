@@ -1,0 +1,1488 @@
+[2026-05-31T20:00:03.142] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-31T20:00:03.144] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.0',
+  dependencies: { '@ohos/hvigor-ohos-plugin': '6.22.3' }
+}
+[2026-05-31T20:00:03.603] [DEBUG] debug-file - hvigor build process will be closed with an error.
+[2026-05-31T20:00:03.632] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-31T20:00:03.146] [DEBUG] debug-file - env: daemon=false
+[2026-05-31T20:00:03.604] [ERROR] debug-file - [31m00303010 Configuration Error
+Error Message: The property of module should be an array in root project build-profile.json5. At file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5
+
+* Try the following:
+  > Check the project-level build-profile.json5 file and ensure that the module's option is an array.
+[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+
+[2026-05-31T20:00:03.634] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-31T20:00:03.146] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2026-05-31T20:00:03.604] [DEBUG] debug-file - ERROR: stacktrace = AdaptorError: [31m00303010 Configuration Error
+Error Message: The property of module should be an array in root project build-profile.json5. At file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5
+
+* Try the following:
+  > Check the project-level build-profile.json5 file and ensure that the module's option is an array.
+[39m
+    at HvigorLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at checkProjectConfigFile (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\external\core\hvigor-config.js:1:3667)
+    at new HvigorConfig (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\external\core\hvigor-config.js:1:1421)
+    at hvigorConfigInit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\external\core\hvigor-config.js:1:4092)
+    at init (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\init.js:1:2867)
+    at start (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js:1:2495)
+    at boot (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js:1:1795)
+    at startHvigorBuild (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\cli\main\cli.js:1:7583)
+    at D:\Huawei\DevEco Studio\tools\hvigor\hvigor\bin\hvigor.js:50:64
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - Clear worker 0.
+[2026-05-31T20:00:03.604] [ERROR] debug-file - AdaptorError: [31m00303010 Configuration Error
+Error Message: The property of module should be an array in root project build-profile.json5. At file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5
+
+* Try the following:
+  > Check the project-level build-profile.json5 file and ensure that the module's option is an array.
+[39m
+    at HvigorLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at checkProjectConfigFile (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\external\core\hvigor-config.js:1:3667)
+    at new HvigorConfig (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\external\core\hvigor-config.js:1:1421)
+    at hvigorConfigInit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\external\core\hvigor-config.js:1:4092)
+    at init (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\init.js:1:2867)
+    at start (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js:1:2495)
+    at boot (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js:1:1795)
+    at startHvigorBuild (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\cli\main\cli.js:1:7583)
+    at D:\Huawei\DevEco Studio\tools\hvigor\hvigor\bin\hvigor.js:50:64
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - Worker 0 has been cleared.
+[2026-05-31T20:00:03.615] [ERROR] debug-file - BUILD FAILED in 17 ms 
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-31T20:00:03.630] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - Clear worker 1.
+[2026-05-31T20:00:03.630] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - Worker 1 has been cleared.
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:00:03.640] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-31T20:00:03.644] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2026-05-31T20:00:03.645] [DEBUG] debug-file - Current worker pool is terminated.
+[2026-05-31T20:00:03.661] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2026-05-31T20:00:35.396] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-31T20:00:35.754] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-05-31T20:00:38.118] [DEBUG] debug-file - hvigorfile, require result:  { harTasks: [Getter] }
+[2026-05-31T20:00:35.397] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.0',
+  dependencies: { '@ohos/hvigor-ohos-plugin': '6.22.3' }
+}
+[2026-05-31T20:00:38.128] [DEBUG] debug-file - hvigor build process will be closed with an error.
+[2026-05-31T20:00:38.120] [DEBUG] debug-file - Starting plugin build process
+[2026-05-31T20:00:38.122] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\index.js
+- G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+- D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\cli\main\cli.js
+- D:\Huawei\DevEco Studio\tools\hvigor\hvigor\bin\hvigor.js
+[2026-05-31T20:00:35.754] [DEBUG] debug-file - Since current hvigor version 6.22.3 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.
+[2026-05-31T20:00:38.165] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-31T20:00:38.119] [DEBUG] debug-file - hvigorfile, binding system plugins { harTasks: [Getter] }
+[2026-05-31T20:00:35.399] [DEBUG] debug-file - env: daemon=false
+[2026-05-31T20:00:38.128] [ERROR] debug-file - [31m00302032 Script Error
+Error Message: Invalid exports, no system plugins were found in hvigorfile. At file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts 
+
+* Try the following:
+  > Check if system plugin defined correctly in file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts 
+[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+
+[2026-05-31T20:00:38.120] [DEBUG] debug-file - Har plugin creating...
+[2026-05-31T20:00:35.755] [DEBUG] debug-file - Cache service initialization finished in 1 ms 
+[2026-05-31T20:00:38.167] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-31T20:00:35.399] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc
+[2026-05-31T20:00:38.129] [DEBUG] debug-file - ERROR: stacktrace = AdaptorError: [31m00302032 Script Error
+Error Message: Invalid exports, no system plugins were found in hvigorfile. At file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts 
+
+* Try the following:
+  > Check if system plugin defined correctly in file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts 
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at StageInitializationStrategy.createProjectModel (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:2556)
+    at StageInitializationStrategy.initPluginParam (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:2721)
+    at StageInitializationStrategy.createHarPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:2092)
+    at HarPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\har-plugin-builder.js:1:622)
+    at HarPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+    at PluginFactory.getHarPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js:1:667)
+    at harTasks (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\index.js:1:861)
+    at bindSystemPlugins (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js:1:6652)
+    at evaluateNodeVigorFile (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js:1:9307)
+[2026-05-31T20:00:35.756] [DEBUG] debug-file - hvigorfile, resolving G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+[2026-05-31T20:00:38.169] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2026-05-31T20:00:38.129] [ERROR] debug-file - AdaptorError: [31m00302032 Script Error
+Error Message: Invalid exports, no system plugins were found in hvigorfile. At file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts 
+
+* Try the following:
+  > Check if system plugin defined correctly in file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts 
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at StageInitializationStrategy.createProjectModel (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:2556)
+    at StageInitializationStrategy.initPluginParam (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:2721)
+    at StageInitializationStrategy.createHarPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:2092)
+    at HarPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\har-plugin-builder.js:1:622)
+    at HarPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+    at PluginFactory.getHarPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js:1:667)
+    at harTasks (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\index.js:1:861)
+    at bindSystemPlugins (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js:1:6652)
+    at evaluateNodeVigorFile (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js:1:9307)
+[2026-05-31T20:00:38.169] [DEBUG] debug-file - Clear worker 0.
+[2026-05-31T20:00:38.139] [ERROR] debug-file - BUILD FAILED in 2 s 392 ms 
+[2026-05-31T20:00:38.169] [DEBUG] debug-file - Worker 0 has been cleared.
+[2026-05-31T20:00:38.161] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-31T20:00:38.169] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-31T20:00:38.162] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-31T20:00:38.169] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:00:38.169] [DEBUG] debug-file - Clear worker 1.
+[2026-05-31T20:00:38.169] [DEBUG] debug-file - Worker 1 has been cleared.
+[2026-05-31T20:00:38.169] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-05-31T20:00:38.169] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:00:38.170] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-31T20:00:38.176] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2026-05-31T20:00:38.177] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2026-05-31T20:00:38.177] [DEBUG] debug-file - Current worker pool is terminated.
+[2026-05-31T20:23:39.874] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-31T20:23:40.285] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-05-31T20:23:43.349] [DEBUG] debug-file - hvigorfile, require result:  { appTasks: [Getter] }
+[2026-05-31T20:23:43.351] [DEBUG] debug-file - Starting plugin build process
+[2026-05-31T20:23:43.489] [DEBUG] debug-file - hvigor build process will be closed with an error.
+[2026-05-31T20:23:39.876] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.0',
+  dependencies: { '@ohos/hvigor-ohos-plugin': '6.22.3' }
+}
+[2026-05-31T20:23:40.286] [DEBUG] debug-file - Since current hvigor version 6.22.3 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.
+[2026-05-31T20:23:43.517] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-31T20:23:43.350] [DEBUG] debug-file - hvigorfile, binding system plugins { appTasks: [Getter] }
+[2026-05-31T20:23:43.351] [DEBUG] debug-file - App plugin prepare start...
+[2026-05-31T20:23:43.490] [ERROR] debug-file - [31m00303038 Configuration Error
+Error Message: Schema validate failed, at file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5
+
+* Try the following:
+  > Please check the following fields. 
+ {
+  instancePath: 'modules[0].srcPath',
+  keyword: 'pattern',
+  params: { pattern: '^(\\./|\\.\\./|/)[\\s\\S]+$' },
+  message: 'must match pattern "^(\\./|\\.\\./|/)[\\s\\S]+$"',
+  location: 'G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/build-profile.json5:20:21'
+} 
+
+[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+
+[2026-05-31T20:23:39.877] [DEBUG] debug-file - env: daemon=false
+[2026-05-31T20:23:40.287] [DEBUG] debug-file - Cache service initialization finished in 2 ms 
+[2026-05-31T20:23:43.519] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-31T20:23:43.351] [DEBUG] debug-file - App plugin prepare end...
+[2026-05-31T20:23:43.490] [DEBUG] debug-file - ERROR: stacktrace = AdaptorError: [31m00303038 Configuration Error
+Error Message: Schema validate failed, at file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5
+
+* Try the following:
+  > Please check the following fields. 
+ {
+  instancePath: 'modules[0].srcPath',
+  keyword: 'pattern',
+  params: { pattern: '^(\\./|\\.\\./|/)[\\s\\S]+$' },
+  message: 'must match pattern "^(\\./|\\.\\./|/)[\\s\\S]+$"',
+  location: 'G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/build-profile.json5:20:21'
+} 
+
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at ValidateUtil.doSchemaCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:8177)
+    at ValidateUtil.submitSchemaCheckWork (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:7013)
+    at ProjectModelImpl.projectBuildProfileCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:9192)
+    at new CoreProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:2627)
+    at new ProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\project-model-impl.js:1:596)
+    at new AppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\app-plugin.js:1:514)
+    at StageInitializationStrategy.createAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:949)
+    at AppPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js:1:1485)
+    at AppPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+[2026-05-31T20:23:39.877] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc
+[2026-05-31T20:23:40.288] [DEBUG] debug-file - hvigorfile, resolving G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+[2026-05-31T20:23:43.520] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2026-05-31T20:23:43.351] [DEBUG] debug-file - App plugin creating...
+[2026-05-31T20:23:43.490] [ERROR] debug-file - AdaptorError: [31m00303038 Configuration Error
+Error Message: Schema validate failed, at file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5
+
+* Try the following:
+  > Please check the following fields. 
+ {
+  instancePath: 'modules[0].srcPath',
+  keyword: 'pattern',
+  params: { pattern: '^(\\./|\\.\\./|/)[\\s\\S]+$' },
+  message: 'must match pattern "^(\\./|\\.\\./|/)[\\s\\S]+$"',
+  location: 'G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/build-profile.json5:20:21'
+} 
+
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at ValidateUtil.doSchemaCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:8177)
+    at ValidateUtil.submitSchemaCheckWork (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:7013)
+    at ProjectModelImpl.projectBuildProfileCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:9192)
+    at new CoreProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:2627)
+    at new ProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\project-model-impl.js:1:596)
+    at new AppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\app-plugin.js:1:514)
+    at StageInitializationStrategy.createAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:949)
+    at AppPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js:1:1485)
+    at AppPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+[2026-05-31T20:23:43.521] [DEBUG] debug-file - Clear worker 0.
+[2026-05-31T20:23:43.499] [ERROR] debug-file - BUILD FAILED in 3 s 220 ms 
+[2026-05-31T20:23:43.521] [DEBUG] debug-file - Worker 0 has been cleared.
+[2026-05-31T20:23:43.515] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-31T20:23:43.521] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-31T20:23:43.515] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-31T20:23:43.521] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:23:43.521] [DEBUG] debug-file - Clear worker 1.
+[2026-05-31T20:23:43.521] [DEBUG] debug-file - Worker 1 has been cleared.
+[2026-05-31T20:23:43.521] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-05-31T20:23:43.521] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:23:43.521] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-31T20:23:43.525] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2026-05-31T20:23:43.525] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2026-05-31T20:23:43.526] [DEBUG] debug-file - Current worker pool is terminated.
+[2026-05-31T20:24:29.505] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-31T20:24:29.890] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-05-31T20:24:32.239] [DEBUG] debug-file - hvigorfile, require result:  { appTasks: [Getter] }
+[2026-05-31T20:24:32.241] [DEBUG] debug-file - Starting plugin build process
+[2026-05-31T20:24:32.388] [DEBUG] debug-file - hvigor build process will be closed with an error.
+[2026-05-31T20:24:29.506] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.0',
+  dependencies: { '@ohos/hvigor-ohos-plugin': '6.22.3' }
+}
+[2026-05-31T20:24:32.420] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-31T20:24:29.890] [DEBUG] debug-file - Since current hvigor version 6.22.3 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.
+[2026-05-31T20:24:32.240] [DEBUG] debug-file - hvigorfile, binding system plugins { appTasks: [Getter] }
+[2026-05-31T20:24:32.241] [DEBUG] debug-file - App plugin prepare start...
+[2026-05-31T20:24:32.390] [ERROR] debug-file - [31m00303038 Configuration Error
+Error Message: Schema validate failed, at file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5
+
+* Try the following:
+  > Please check the following fields. 
+ {
+  instancePath: 'modules[0].srcPath',
+  keyword: 'pattern',
+  params: { pattern: '^(\\./|\\.\\./|/)[\\s\\S]+$' },
+  message: 'must match pattern "^(\\./|\\.\\./|/)[\\s\\S]+$"',
+  location: 'G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/build-profile.json5:20:22'
+} 
+
+[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+
+[2026-05-31T20:24:29.507] [DEBUG] debug-file - env: daemon=false
+[2026-05-31T20:24:32.422] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-31T20:24:29.892] [DEBUG] debug-file - Cache service initialization finished in 2 ms 
+[2026-05-31T20:24:32.241] [DEBUG] debug-file - App plugin prepare end...
+[2026-05-31T20:24:32.390] [DEBUG] debug-file - ERROR: stacktrace = AdaptorError: [31m00303038 Configuration Error
+Error Message: Schema validate failed, at file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5
+
+* Try the following:
+  > Please check the following fields. 
+ {
+  instancePath: 'modules[0].srcPath',
+  keyword: 'pattern',
+  params: { pattern: '^(\\./|\\.\\./|/)[\\s\\S]+$' },
+  message: 'must match pattern "^(\\./|\\.\\./|/)[\\s\\S]+$"',
+  location: 'G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/build-profile.json5:20:22'
+} 
+
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at ValidateUtil.doSchemaCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:8177)
+    at ValidateUtil.submitSchemaCheckWork (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:7013)
+    at ProjectModelImpl.projectBuildProfileCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:9192)
+    at new CoreProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:2627)
+    at new ProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\project-model-impl.js:1:596)
+    at new AppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\app-plugin.js:1:514)
+    at StageInitializationStrategy.createAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:949)
+    at AppPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js:1:1485)
+    at AppPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+[2026-05-31T20:24:29.507] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc
+[2026-05-31T20:24:32.423] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2026-05-31T20:24:29.893] [DEBUG] debug-file - hvigorfile, resolving G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+[2026-05-31T20:24:32.241] [DEBUG] debug-file - App plugin creating...
+[2026-05-31T20:24:32.390] [ERROR] debug-file - AdaptorError: [31m00303038 Configuration Error
+Error Message: Schema validate failed, at file: G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5
+
+* Try the following:
+  > Please check the following fields. 
+ {
+  instancePath: 'modules[0].srcPath',
+  keyword: 'pattern',
+  params: { pattern: '^(\\./|\\.\\./|/)[\\s\\S]+$' },
+  message: 'must match pattern "^(\\./|\\.\\./|/)[\\s\\S]+$"',
+  location: 'G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/build-profile.json5:20:22'
+} 
+
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at ValidateUtil.doSchemaCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:8177)
+    at ValidateUtil.submitSchemaCheckWork (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:7013)
+    at ProjectModelImpl.projectBuildProfileCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:9192)
+    at new CoreProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:2627)
+    at new ProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\project-model-impl.js:1:596)
+    at new AppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\app-plugin.js:1:514)
+    at StageInitializationStrategy.createAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:949)
+    at AppPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js:1:1485)
+    at AppPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+[2026-05-31T20:24:32.423] [DEBUG] debug-file - Clear worker 0.
+[2026-05-31T20:24:32.401] [ERROR] debug-file - BUILD FAILED in 2 s 517 ms 
+[2026-05-31T20:24:32.424] [DEBUG] debug-file - Worker 0 has been cleared.
+[2026-05-31T20:24:32.418] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-31T20:24:32.424] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-31T20:24:32.418] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-31T20:24:32.424] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:24:32.424] [DEBUG] debug-file - Clear worker 1.
+[2026-05-31T20:24:32.424] [DEBUG] debug-file - Worker 1 has been cleared.
+[2026-05-31T20:24:32.424] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-05-31T20:24:32.424] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:24:32.424] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-31T20:24:32.428] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2026-05-31T20:24:32.428] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2026-05-31T20:24:32.429] [DEBUG] debug-file - Current worker pool is terminated.
+[2026-05-31T20:31:07.582] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-31T20:31:07.981] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-05-31T20:31:07.583] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.0',
+  dependencies: { '@ohos/hvigor-ohos-plugin': '6.22.3' }
+}
+[2026-05-31T20:31:10.601] [DEBUG] debug-file - Starting plugin build process
+[2026-05-31T20:31:10.599] [DEBUG] debug-file - hvigorfile, require result:  { appTasks: [Getter] }
+[2026-05-31T20:31:10.766] [DEBUG] debug-file - hvigor build process will be closed with an error.
+[2026-05-31T20:31:10.797] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-31T20:31:07.982] [DEBUG] debug-file - Since current hvigor version 6.22.3 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.
+[2026-05-31T20:31:07.585] [DEBUG] debug-file - env: daemon=false
+[2026-05-31T20:31:10.601] [DEBUG] debug-file - App plugin prepare start...
+[2026-05-31T20:31:10.599] [DEBUG] debug-file - hvigorfile, binding system plugins { appTasks: [Getter] }
+[2026-05-31T20:31:10.766] [ERROR] debug-file - [31m00303024 Configuration Error
+Error Message: The project structure and configuration need to be upgraded before use.
+
+* Try the following:
+  > Use the migration tool to update the project structure and configuration with Deveco Studio, or refer to the guide to manually update the project structure and configuration.
+[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+
+[2026-05-31T20:31:10.799] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-31T20:31:07.983] [DEBUG] debug-file - Cache service initialization finished in 2 ms 
+[2026-05-31T20:31:07.585] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc
+[2026-05-31T20:31:10.766] [DEBUG] debug-file - ERROR: stacktrace = AdaptorError: [31m00303024 Configuration Error
+Error Message: The project structure and configuration need to be upgraded before use.
+
+* Try the following:
+  > Use the migration tool to update the project structure and configuration with Deveco Studio, or refer to the guide to manually update the project structure and configuration.
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at ValidateUtil.modelVersionCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:3745)
+    at ProjectModelImpl.projectStatusCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:5872)
+    at new CoreProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:2843)
+    at new ProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\project-model-impl.js:1:596)
+    at new AppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\app-plugin.js:1:514)
+    at StageInitializationStrategy.createAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:949)
+    at AppPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js:1:1485)
+    at AppPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+    at PluginFactory.getAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js:1:481)
+[2026-05-31T20:31:10.801] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2026-05-31T20:31:10.601] [DEBUG] debug-file - App plugin prepare end...
+[2026-05-31T20:31:07.985] [DEBUG] debug-file - hvigorfile, resolving G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+[2026-05-31T20:31:10.767] [ERROR] debug-file - AdaptorError: [31m00303024 Configuration Error
+Error Message: The project structure and configuration need to be upgraded before use.
+
+* Try the following:
+  > Use the migration tool to update the project structure and configuration with Deveco Studio, or refer to the guide to manually update the project structure and configuration.
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at ValidateUtil.modelVersionCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:3745)
+    at ProjectModelImpl.projectStatusCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:5872)
+    at new CoreProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:2843)
+    at new ProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\project-model-impl.js:1:596)
+    at new AppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\app-plugin.js:1:514)
+    at StageInitializationStrategy.createAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:949)
+    at AppPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js:1:1485)
+    at AppPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+    at PluginFactory.getAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js:1:481)
+[2026-05-31T20:31:10.801] [DEBUG] debug-file - Clear worker 0.
+[2026-05-31T20:31:10.601] [DEBUG] debug-file - App plugin creating...
+[2026-05-31T20:31:10.778] [ERROR] debug-file - BUILD FAILED in 2 s 803 ms 
+[2026-05-31T20:31:10.801] [DEBUG] debug-file - Worker 0 has been cleared.
+[2026-05-31T20:31:10.795] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-31T20:31:10.801] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-31T20:31:10.795] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-31T20:31:10.801] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:31:10.801] [DEBUG] debug-file - Clear worker 1.
+[2026-05-31T20:31:10.801] [DEBUG] debug-file - Worker 1 has been cleared.
+[2026-05-31T20:31:10.801] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-05-31T20:31:10.801] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:31:10.808] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-31T20:31:10.811] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2026-05-31T20:31:10.811] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2026-05-31T20:31:10.811] [DEBUG] debug-file - Current worker pool is terminated.
+[2026-05-31T20:31:21.965] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-31T20:31:22.343] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: true,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-05-31T20:31:24.549] [DEBUG] debug-file - hvigorfile, require result:  { appTasks: [Getter] }
+[2026-05-31T20:31:21.966] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.0',
+  dependencies: { '@ohos/hvigor-ohos-plugin': '6.22.3' }
+}
+[2026-05-31T20:31:24.552] [DEBUG] debug-file - Starting plugin build process
+[2026-05-31T20:31:24.699] [DEBUG] debug-file - hvigor build process will be closed with an error.
+[2026-05-31T20:31:22.343] [DEBUG] debug-file - Since current hvigor version 6.22.3 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.
+[2026-05-31T20:31:24.731] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-31T20:31:24.550] [DEBUG] debug-file - hvigorfile, binding system plugins { appTasks: [Getter] }
+[2026-05-31T20:31:21.968] [DEBUG] debug-file - env: daemon=false
+[2026-05-31T20:31:24.552] [DEBUG] debug-file - App plugin prepare start...
+[2026-05-31T20:31:24.699] [ERROR] debug-file - [31m00303024 Configuration Error
+Error Message: The project structure and configuration need to be upgraded before use.
+
+* Try the following:
+  > Use the migration tool to update the project structure and configuration with Deveco Studio, or refer to the guide to manually update the project structure and configuration.
+[39m
+
+[31m* Try:
+> Run with --debug option to get more log output.
+
+[2026-05-31T20:31:22.345] [DEBUG] debug-file - Cache service initialization finished in 2 ms 
+[2026-05-31T20:31:24.732] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-31T20:31:21.968] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc,--enable-source-maps
+[2026-05-31T20:31:24.552] [DEBUG] debug-file - App plugin prepare end...
+[2026-05-31T20:31:24.700] [ERROR] debug-file - AdaptorError: [31m00303024 Configuration Error
+Error Message: The project structure and configuration need to be upgraded before use.
+
+* Try the following:
+  > Use the migration tool to update the project structure and configuration with Deveco Studio, or refer to the guide to manually update the project structure and configuration.
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at ValidateUtil.modelVersionCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:3745)
+    at ProjectModelImpl.projectStatusCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:5872)
+    at new CoreProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:2843)
+    at new ProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\project-model-impl.js:1:596)
+    at new AppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\app-plugin.js:1:514)
+    at StageInitializationStrategy.createAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:949)
+    at AppPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js:1:1485)
+    at AppPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+    at PluginFactory.getAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js:1:481)
+[2026-05-31T20:31:22.346] [DEBUG] debug-file - hvigorfile, resolving G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+[2026-05-31T20:31:24.734] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2026-05-31T20:31:24.552] [DEBUG] debug-file - App plugin creating...
+[2026-05-31T20:31:24.711] [ERROR] debug-file - BUILD FAILED in 2 s 374 ms 
+[2026-05-31T20:31:24.735] [DEBUG] debug-file - Clear worker 0.
+[2026-05-31T20:31:24.729] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-31T20:31:24.735] [DEBUG] debug-file - Worker 0 has been cleared.
+[2026-05-31T20:31:24.729] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-31T20:31:24.735] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-31T20:31:24.735] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:31:24.735] [DEBUG] debug-file - Clear worker 1.
+[2026-05-31T20:31:24.735] [DEBUG] debug-file - Worker 1 has been cleared.
+[2026-05-31T20:31:24.735] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-05-31T20:31:24.735] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:31:24.743] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-31T20:31:24.746] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2026-05-31T20:31:24.746] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2026-05-31T20:31:24.746] [DEBUG] debug-file - Current worker pool is terminated.
+[2026-05-31T20:31:38.579] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-31T20:31:38.944] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 10000, levelStr: 'DEBUG', colour: 'cyan' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-05-31T20:31:40.954] [DEBUG] debug-file - hvigorfile, require result:  { appTasks: [Getter] }
+[2026-05-31T20:31:40.956] [DEBUG] debug-file - Starting plugin build process
+[2026-05-31T20:31:41.104] [DEBUG] debug-file - hvigor build process will be closed with an error.
+[2026-05-31T20:31:38.580] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.0',
+  dependencies: { '@ohos/hvigor-ohos-plugin': '6.22.3' }
+}
+[2026-05-31T20:31:41.135] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-31T20:31:38.944] [DEBUG] debug-file - Since current hvigor version 6.22.3 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.
+[2026-05-31T20:31:40.954] [DEBUG] debug-file - hvigorfile, binding system plugins { appTasks: [Getter] }
+[2026-05-31T20:31:40.956] [DEBUG] debug-file - App plugin prepare start...
+[2026-05-31T20:31:41.104] [ERROR] debug-file - [31m00303024 Configuration Error
+Error Message: The project structure and configuration need to be upgraded before use.
+
+* Try the following:
+  > Use the migration tool to update the project structure and configuration with Deveco Studio, or refer to the guide to manually update the project structure and configuration.
+[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+
+[2026-05-31T20:31:38.582] [DEBUG] debug-file - env: daemon=false
+[2026-05-31T20:31:41.137] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-31T20:31:38.946] [DEBUG] debug-file - Cache service initialization finished in 2 ms 
+[2026-05-31T20:31:40.956] [DEBUG] debug-file - App plugin prepare end...
+[2026-05-31T20:31:41.105] [DEBUG] debug-file - ERROR: stacktrace = AdaptorError: [31m00303024 Configuration Error
+Error Message: The project structure and configuration need to be upgraded before use.
+
+* Try the following:
+  > Use the migration tool to update the project structure and configuration with Deveco Studio, or refer to the guide to manually update the project structure and configuration.
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at ValidateUtil.modelVersionCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:3745)
+    at ProjectModelImpl.projectStatusCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:5872)
+    at new CoreProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:2843)
+    at new ProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\project-model-impl.js:1:596)
+    at new AppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\app-plugin.js:1:514)
+    at StageInitializationStrategy.createAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:949)
+    at AppPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js:1:1485)
+    at AppPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+    at PluginFactory.getAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js:1:481)
+[2026-05-31T20:31:38.582] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc
+[2026-05-31T20:31:41.139] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2026-05-31T20:31:38.947] [DEBUG] debug-file - hvigorfile, resolving G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+[2026-05-31T20:31:40.956] [DEBUG] debug-file - App plugin creating...
+[2026-05-31T20:31:41.105] [ERROR] debug-file - AdaptorError: [31m00303024 Configuration Error
+Error Message: The project structure and configuration need to be upgraded before use.
+
+* Try the following:
+  > Use the migration tool to update the project structure and configuration with Deveco Studio, or refer to the guide to manually update the project structure and configuration.
+[39m
+    at OhosLogger.printErrorExit (D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\log\hvigor-log.js:1:5087)
+    at ValidateUtil.modelVersionCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\utils\validate\validate-util.js:1:3745)
+    at ProjectModelImpl.projectStatusCheck (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:5872)
+    at new CoreProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\core-project-model-impl.js:1:2843)
+    at new ProjectModelImpl (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\model\project\project-model-impl.js:1:596)
+    at new AppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\app-plugin.js:1:514)
+    at StageInitializationStrategy.createAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js:1:949)
+    at AppPluginBuilder.createPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js:1:1485)
+    at AppPluginBuilder.build (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js:1:756)
+    at PluginFactory.getAppPlugin (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js:1:481)
+[2026-05-31T20:31:41.139] [DEBUG] debug-file - Clear worker 0.
+[2026-05-31T20:31:41.115] [ERROR] debug-file - BUILD FAILED in 2 s 178 ms 
+[2026-05-31T20:31:41.139] [DEBUG] debug-file - Worker 0 has been cleared.
+[2026-05-31T20:31:41.132] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-31T20:31:41.139] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-31T20:31:41.133] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-31T20:31:41.139] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:31:41.139] [DEBUG] debug-file - Clear worker 1.
+[2026-05-31T20:31:41.139] [DEBUG] debug-file - Worker 1 has been cleared.
+[2026-05-31T20:31:41.139] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-05-31T20:31:41.139] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:31:41.146] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-31T20:31:41.149] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2026-05-31T20:31:41.150] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2026-05-31T20:31:41.150] [DEBUG] debug-file - Current worker pool is terminated.
+[2026-05-31T20:33:25.338] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-31T20:33:25.712] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-05-31T20:33:27.842] [DEBUG] debug-file - hvigorfile, require result:  { appTasks: [Getter] }
+[2026-05-31T20:33:27.994] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2026-05-31T20:33:27.845] [DEBUG] debug-file - Starting plugin build process
+[2026-05-31T20:33:27.991] [DEBUG] debug-file - App plugin register hook start...
+[2026-05-31T20:33:27.998] [DEBUG] debug-file - Obtain build option for product 'default'in this build.
+[2026-05-31T20:33:28.016] [DEBUG] debug-file - Start recording SDK configuration permission data.
+[2026-05-31T20:33:28.052] [DEBUG] debug-file - Project task initialization takes 5 ms 
+[2026-05-31T20:33:28.060] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\index.js
+- G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+- D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- D:\Huawei\DevEco Studio\tools\hvigor\hvigor\src\cli\main\cli.js
+- D:\Huawei\DevEco Studio\tools\hvigor\hvigor\bin\hvigor.js
+[2026-05-31T20:33:28.093] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=ucx, buildMode=release
+[2026-05-31T20:33:28.099] [DEBUG] debug-file - project has submodules:ucx
+[2026-05-31T20:33:28.101] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2026-05-31T20:33:28.118] [DEBUG] debug-file - ucx : clean cost memory 0.11109161376953125
+[2026-05-31T20:33:28.109] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-05-31T20:33:25.339] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.0',
+  dependencies: { '@ohos/hvigor-ohos-plugin': '6.22.3' }
+}
+[2026-05-31T20:33:28.124] [DEBUG] debug-file - Executing task :ucx:default@PreBuild
+[2026-05-31T20:33:25.712] [DEBUG] debug-file - Since current hvigor version 6.22.3 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.
+[2026-05-31T20:33:27.843] [DEBUG] debug-file - hvigorfile, binding system plugins { appTasks: [Getter] }
+[2026-05-31T20:33:27.994] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2026-05-31T20:33:27.845] [DEBUG] debug-file - App plugin prepare start...
+[2026-05-31T20:33:27.991] [DEBUG] debug-file - App plugin register hook end...
+[2026-05-31T20:33:27.999] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2026-05-31T20:33:28.045] [DEBUG] debug-file - Sdk init in 46 ms 
+[2026-05-31T20:33:28.052] [DEBUG] debug-file - hvigorfile, resolve finished G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+[2026-05-31T20:33:28.093] [DEBUG] debug-file - Target 'default' config initialized
+[2026-05-31T20:33:28.099] [DEBUG] debug-file - module:ucx no need to execute packageHap
+[2026-05-31T20:33:28.105] [DEBUG] debug-file - load to the disk finished
+[2026-05-31T20:33:28.118] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 414 ms 
+[2026-05-31T20:33:28.111] [DEBUG] debug-file - Module ucx Collected Dependency: 
+[2026-05-31T20:33:25.340] [DEBUG] debug-file - env: daemon=false
+[2026-05-31T20:33:28.125] [WARN] debug-file - The project has not explicitly set the 'targetSdkVersion' version at build-profile.json5. It is recommended to configure it. Reference: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-hvigor-build-profile-app#section45865492619
+[2026-05-31T20:33:25.714] [DEBUG] debug-file - Cache service initialization finished in 2 ms 
+[2026-05-31T20:33:27.995] [DEBUG] debug-file - Product 'default' build option initialized
+[2026-05-31T20:33:27.845] [DEBUG] debug-file - App plugin prepare end...
+[2026-05-31T20:33:27.991] [DEBUG] debug-file - Plugin build process completed
+[2026-05-31T20:33:28.001] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native,previewer
+[2026-05-31T20:33:28.052] [DEBUG] debug-file - hvigorfile, resolving G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\hvigorfile.ts
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - Module 'ucx' target 'default' build option initialized
+[2026-05-31T20:33:28.106] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-05-31T20:33:28.119] [INFO] debug-file - Finished :ucx:clean... after 2 ms 
+[2026-05-31T20:33:28.111] [DEBUG] debug-file - Module ucx's total dependency: 0
+[2026-05-31T20:33:25.340] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc
+[2026-05-31T20:33:25.715] [DEBUG] debug-file - hvigorfile, resolving G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigorfile.ts
+[2026-05-31T20:33:28.126] [DEBUG] debug-file - Task 'ucx:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:27.995] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2026-05-31T20:33:27.845] [DEBUG] debug-file - App plugin creating...
+[2026-05-31T20:33:28.011] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2026-05-31T20:33:28.058] [DEBUG] debug-file - hvigorfile, require result:  { harTasks: [Getter] }
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - End initialize module-target build option map, moduleName=ucx
+[2026-05-31T20:33:28.107] [DEBUG] debug-file - Module arkts Collected Dependency: 
+[2026-05-31T20:33:28.237] [DEBUG] debug-file - Executing task :ucx:default@ProcessOHPackageJson
+[2026-05-31T20:33:28.241] [DEBUG] debug-file - Executing task :ucx:default@CreateHarBuildProfile
+[2026-05-31T20:33:28.256] [DEBUG] debug-file - Executing task :ucx:default@GeneratePkgContextInfo
+[2026-05-31T20:33:28.265] [DEBUG] debug-file - Executing task :ucx:default@ProcessIntegratedHsp
+[2026-05-31T20:33:28.267] [DEBUG] debug-file - Executing task :ucx:default@ProcessModulePrivacyProfile
+[2026-05-31T20:33:28.270] [DEBUG] debug-file - Executing task :ucx:default@ProcessProfile
+[2026-05-31T20:33:28.545] [DEBUG] debug-file - Executing task :ucx:default@ProcessRouterMap
+[2026-05-31T20:33:28.269] [DEBUG] debug-file - Executing task :ucx:default@BuildNativeWithCmake
+[2026-05-31T20:33:28.550] [DEBUG] debug-file - Executing task :ucx:default@ProcessStartupConfig
+[2026-05-31T20:33:28.553] [DEBUG] debug-file - Executing task :ucx:default@BuildNativeWithNinja
+[2026-05-31T20:33:28.548] [DEBUG] debug-file - Executing task :ucx:default@ProcessShareConfig
+[2026-05-31T20:33:28.557] [DEBUG] debug-file - Executing task :ucx:default@ProcessResource
+[2026-05-31T20:33:28.563] [DEBUG] debug-file - Executing task :ucx:default@GenerateLoaderJson
+[2026-05-31T20:33:28.114] [DEBUG] debug-file - Configuration phase cost:2 s 401 ms 
+[2026-05-31T20:33:28.578] [DEBUG] debug-file - Executing task :ucx:default@ProcessLibs
+[2026-05-31T20:33:28.131] [WARN] debug-file - The version number of the '@unicodex/ucx' module does not comply with the SemVer specification.
+               This will affect the installation and publication by ohpm.
+               Make sure the value of version in the oh-package.json5 file of the module complies with the SemVer specification.
+[2026-05-31T20:33:28.058] [DEBUG] debug-file - hvigorfile, binding system plugins { harTasks: [Getter] }
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=ucx, buildMode=debug
+[2026-05-31T20:33:28.107] [DEBUG] debug-file - Module arkts's total dependency: 0
+[2026-05-31T20:33:28.588] [DEBUG] debug-file - Executing task :ucx:default@DoNativeStrip
+[2026-05-31T20:33:28.237] [DEBUG] debug-file - jsonObjWithoutAtModule {"name":"@unicodex/ucx","version":"0.4.0","description":"Unicodex UCX -- ArkTS HAR module","main":"src/main/ets/ucx/Index.ets","types":"src/main/ets/ucx/Index.ets","author":"Unicodex Team","license":"MIT OR Apache-2.0","keywords":["unicodex","ucx","ebook","novel","ed25519","blake3","argon2id","aes-gcm","chacha20-poly1305","harmonyos","arkts"],"dependencies":{}}
+[2026-05-31T20:33:28.242] [DEBUG] debug-file - Task 'ucx:default@CreateHarBuildProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.585] [DEBUG] debug-file - Executing task :ucx:default@CompileResource
+[2026-05-31T20:33:28.262] [DEBUG] debug-file - Task 'ucx:default@GeneratePkgContextInfo' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.265] [DEBUG] debug-file - ucx : default@ProcessIntegratedHsp cost memory 0.02826690673828125
+[2026-05-31T20:33:28.267] [DEBUG] debug-file - ucx : default@ProcessModulePrivacyProfile cost memory 0.02386474609375
+[2026-05-31T20:33:28.271] [DEBUG] debug-file - Task 'ucx:default@ProcessProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.546] [DEBUG] debug-file - ucx : default@ProcessRouterMap cost memory 0.054229736328125
+[2026-05-31T20:33:28.269] [DEBUG] debug-file - ucx : default@BuildNativeWithCmake cost memory 0.013671875
+[2026-05-31T20:33:28.550] [DEBUG] debug-file - Task 'ucx:default@ProcessStartupConfig' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.554] [DEBUG] debug-file - ucx : default@BuildNativeWithNinja cost memory 0.02783966064453125
+[2026-05-31T20:33:28.549] [DEBUG] debug-file - ucx : default@ProcessShareConfig cost memory 0.04949951171875
+[2026-05-31T20:33:28.557] [DEBUG] debug-file - Task 'ucx:default@ProcessResource' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.563] [DEBUG] debug-file - Task 'ucx:default@GenerateLoaderJson' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.116] [DEBUG] debug-file - Configuration task cost before running: 2 s 411 ms 
+[2026-05-31T20:33:28.581] [DEBUG] debug-file - Worker dispatch failed, running processLibs on main thread.
+[2026-05-31T20:33:28.213] [DEBUG] debug-file - current product is not Atomic service.
+[2026-05-31T20:33:28.058] [DEBUG] debug-file - Starting plugin build process
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - Target 'default' config initialized
+[2026-05-31T20:33:28.589] [DEBUG] debug-file - Task 'ucx:default@DoNativeStrip' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.239] [DEBUG] debug-file - ucx : default@ProcessOHPackageJson cost memory 0.03134918212890625
+[2026-05-31T20:33:28.247] [DEBUG] debug-file - ucx : default@CreateHarBuildProfile cost memory 0.04608917236328125
+[2026-05-31T20:33:28.262] [DEBUG] debug-file - ucx : default@GeneratePkgContextInfo cost memory 0.4838104248046875
+[2026-05-31T20:33:28.587] [DEBUG] debug-file - ucx : default@CompileResource cost memory 0.0760345458984375
+[2026-05-31T20:33:28.265] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 561 ms 
+[2026-05-31T20:33:28.267] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 563 ms 
+[2026-05-31T20:33:28.274] [DEBUG] debug-file - [
+  'D:\\Huawei\\DevEco Studio\\tools\\node\\node.exe',
+  'D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\bin\\ark\\ts2abc.js',
+  '--target-api-version',
+  '12',
+  '--target-api-sub-version',
+  'beta1'
+]
+[2026-05-31T20:33:28.546] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 842 ms 
+[2026-05-31T20:33:28.269] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 564 ms 
+[2026-05-31T20:33:28.551] [DEBUG] debug-file - ucx : default@ProcessStartupConfig cost memory 0.0619964599609375
+[2026-05-31T20:33:28.554] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 850 ms 
+[2026-05-31T20:33:28.549] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 844 ms 
+[2026-05-31T20:33:28.560] [DEBUG] debug-file - ucx : default@ProcessResource cost memory 0.35198974609375
+[2026-05-31T20:33:28.574] [DEBUG] debug-file - ucx : default@GenerateLoaderJson cost memory 0.631805419921875
+[2026-05-31T20:33:28.116] [DEBUG] debug-file - Executing task :ucx:clean
+[2026-05-31T20:33:28.583] [DEBUG] debug-file - ucx : default@ProcessLibs cost memory 0.5247421264648438
+[2026-05-31T20:33:28.213] [DEBUG] debug-file - Use tool [win32: JAVA_HOME, CLASSPATH]
+ [ { JAVA_HOME: 'D:\\Java\\jdk-21.0.3\\' }, { CLASSPATH: undefined } ]
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - Module 'ucx' target 'default' build option initialized
+[2026-05-31T20:33:28.239] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 535 ms 
+[2026-05-31T20:33:28.247] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 543 ms 
+[2026-05-31T20:33:28.262] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 558 ms 
+[2026-05-31T20:33:28.587] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 882 ms 
+[2026-05-31T20:33:28.267] [INFO] debug-file - Finished :ucx:default@ProcessModulePrivacyProfile... after 1 ms 
+[2026-05-31T20:33:28.540] [DEBUG] debug-file - 12.0.2.0
+[2026-05-31T20:33:28.265] [INFO] debug-file - Finished :ucx:default@ProcessIntegratedHsp... after 1 ms 
+[2026-05-31T20:33:28.058] [DEBUG] debug-file - Har plugin creating...
+[2026-05-31T20:33:28.547] [INFO] debug-file - Finished :ucx:default@ProcessRouterMap... after 2 ms 
+[2026-05-31T20:33:28.269] [INFO] debug-file - Finished :ucx:default@BuildNativeWithCmake... after 1 ms 
+[2026-05-31T20:33:28.551] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 847 ms 
+[2026-05-31T20:33:28.554] [INFO] debug-file - Finished :ucx:default@BuildNativeWithNinja... after 2 ms 
+[2026-05-31T20:33:28.549] [INFO] debug-file - Finished :ucx:default@ProcessShareConfig... after 1 ms 
+[2026-05-31T20:33:28.560] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 856 ms 
+[2026-05-31T20:33:28.583] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 879 ms 
+[2026-05-31T20:33:28.213] [DEBUG] debug-file - Use tool [win32: NODE_HOME]
+ [ { NODE_HOME: 'D:\\Huawei\\DevEco Studio\\tools\\node' } ]
+[2026-05-31T20:33:28.117] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - End initialize module-target build option map, moduleName=ucx
+[2026-05-31T20:33:28.240] [INFO] debug-file - Finished :ucx:default@ProcessOHPackageJson... after 3 ms 
+[2026-05-31T20:33:28.574] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 870 ms 
+[2026-05-31T20:33:28.262] [INFO] debug-file - Finished :ucx:default@GeneratePkgContextInfo... after 7 ms 
+[2026-05-31T20:33:28.247] [INFO] debug-file - Finished :ucx:default@CreateHarBuildProfile... after 6 ms 
+[2026-05-31T20:33:28.587] [INFO] debug-file - Finished :ucx:default@CompileResource... after 2 ms 
+[2026-05-31T20:33:28.542] [DEBUG] debug-file - No need to add fake ui ability because of in HAR module.
+[2026-05-31T20:33:28.551] [INFO] debug-file - Finished :ucx:default@ProcessStartupConfig... after 1 ms 
+[2026-05-31T20:33:28.555] [DEBUG] debug-file - restool module names: ucx; moduleName=ucx, taskName=default@ProcessResource
+[2026-05-31T20:33:28.561] [INFO] debug-file - Finished :ucx:default@ProcessResource... after 4 ms 
+[2026-05-31T20:33:28.233] [WARN] debug-file - The value of types must be a .d.ts or .d.ets file. at ucx oh-package.json5.
+[2026-05-31T20:33:28.583] [INFO] debug-file - Finished :ucx:default@ProcessLibs... after 6 ms 
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=ucx, buildMode=debug
+[2026-05-31T20:33:28.576] [INFO] debug-file - Finished :ucx:default@GenerateLoaderJson... after 12 ms 
+[2026-05-31T20:33:28.248] [DEBUG] debug-file - Executing task :ucx:default@CreateHarModuleInfo
+[2026-05-31T20:33:28.543] [DEBUG] debug-file - ucx : default@ProcessProfile cost memory 1.7840118408203125
+[2026-05-31T20:33:28.234] [DEBUG] debug-file - ucx : default@PreBuild cost memory -1.0502471923828125
+[2026-05-31T20:33:28.584] [DEBUG] debug-file - restool module names: ucx; moduleName=ucx, taskName=default@CompileResource
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - Target 'default' config initialized
+[2026-05-31T20:33:28.248] [DEBUG] debug-file - Task 'ucx:default@CreateHarModuleInfo' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.544] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 839 ms 
+[2026-05-31T20:33:28.234] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 529 ms 
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - Module 'ucx' target 'default' build option initialized
+[2026-05-31T20:33:28.248] [DEBUG] debug-file - ucx : default@CreateHarModuleInfo cost memory 0.0324859619140625
+[2026-05-31T20:33:28.544] [INFO] debug-file - Finished :ucx:default@ProcessProfile... after 274 ms 
+[2026-05-31T20:33:28.235] [INFO] debug-file - Finished :ucx:default@PreBuild... after 110 ms 
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - End initialize module-target build option map, moduleName=ucx
+[2026-05-31T20:33:28.594] [DEBUG] debug-file - ucx : default@DoNativeStrip cost memory -7.814872741699219
+[2026-05-31T20:33:28.248] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 544 ms 
+[2026-05-31T20:33:28.094] [DEBUG] debug-file - Obtain build option for module 'ucx' target 'default'in this build.
+[2026-05-31T20:33:28.594] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 889 ms 
+[2026-05-31T20:33:28.598] [DEBUG] debug-file - Executing task :ucx:default@HarCompileArkTS
+[2026-05-31T20:33:28.595] [DEBUG] debug-file - Executing task :ucx:default@ProcessObfuscationFiles
+[2026-05-31T20:33:28.617] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-31T20:33:28.098] [DEBUG] debug-file - Module ucx task initialization takes 3 ms 
+[2026-05-31T20:33:28.249] [INFO] debug-file - Finished :ucx:default@CreateHarModuleInfo... after 1 ms 
+[2026-05-31T20:33:28.594] [INFO] debug-file - Finished :ucx:default@DoNativeStrip... after 6 ms 
+[2026-05-31T20:33:28.595] [DEBUG] debug-file - ucx : default@ProcessObfuscationFiles cost memory 0.01326751708984375
+[2026-05-31T20:33:28.598] [DEBUG] debug-file - obfuscationOptions: undefined
+[2026-05-31T20:33:28.618] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-31T20:33:28.098] [DEBUG] debug-file - Har plugin register hook start...
+[2026-05-31T20:33:28.626] [DEBUG] debug-file - Executing task :ucx:default@CacheNativeLibs
+[2026-05-31T20:33:28.249] [DEBUG] debug-file - Executing task :ucx:default@ConfigureCmake
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - default@HarCompileArkTS work[0] is submitted.
+[2026-05-31T20:33:28.601] [DEBUG] debug-file - Task 'ucx:default@HarCompileArkTS' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.627] [DEBUG] debug-file - Task 'ucx:default@CacheNativeLibs' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.098] [DEBUG] debug-file - Har plugin register hook end...
+[2026-05-31T20:33:28.250] [DEBUG] debug-file - ucx : default@ConfigureCmake cost memory 0.01206207275390625
+[2026-05-31T20:33:28.596] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 891 ms 
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - default@HarCompileArkTS work[0] is pushed to ready queue.
+[2026-05-31T20:33:28.614] [DEBUG] debug-file - build config:
+[2026-05-31T20:33:28.250] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 545 ms 
+[2026-05-31T20:33:28.098] [DEBUG] debug-file - Plugin build process completed
+[2026-05-31T20:33:28.596] [INFO] debug-file - Finished :ucx:default@ProcessObfuscationFiles... after 1 ms 
+[2026-05-31T20:33:28.627] [DEBUG] debug-file - default@CacheNativeLibs work[2] is submitted.
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[19] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.614] [DEBUG] debug-file - {
+  moduleType: 'har',
+  perf: 0,
+  targetName: '.default',
+  packageManagerType: 'ohpm',
+  localPropertiesPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\local.properties',
+  isPreview: false,
+  isOhosTest: false,
+  isLocalTest: false,
+  buildMode: 'Debug',
+  hotReloadBuild: undefined,
+  watchMode: 'false',
+  aceProfilePath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\intermediates\\res\\default\\resources\\base\\profile',
+  etsLoaderPath: 'D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader',
+  modulePath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx',
+  testFrameworkPar: {
+    testMode: undefined,
+    coveragePathFilter: undefined,
+    coverageMode: undefined
+  },
+  needCoverageInsert: false,
+  debugLine: false,
+  projectTopDir: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts',
+  compileSdkVersion: 22,
+  compatibleSdkVersion: 12,
+  originCompatibleSdkVersion: '5.0.0(12)',
+  compatibleSdkVersionStage: 'beta1',
+  bundleName: 'c***x',
+  etsLoaderVersion: '6.0.2.130',
+  etsLoaderReleaseType: 'Release',
+  aotCompileMode: 'type',
+  apPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\modules.ap',
+  entryModuleName: 'ucx',
+  entryModuleVersion: '0.4.0',
+  entryPackageName: '@unicodex/ucx',
+  allModuleNameHash: '07b73f2e01c5f583ab89ada3361453beb18e515bd3f7142a5cd85fbc0d4ad338',
+  externalApiPaths: [ 'D:\\Huawei\\DevEco Studio\\sdk\\default\\hms\\ets' ],
+  compilerTypes: [],
+  isCrossplatform: false,
+  hvigorPluginFile: undefined,
+  compilePluginPath: undefined,
+  buildGeneratedProfilePath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\generated\\profile\\default',
+  bundleType: 'app',
+  arkTSVersion: undefined,
+  apiVersion: 22,
+  needCompleteSourcesMap: false,
+  isFaMode: false,
+  buildDir: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build',
+  deviceTypes: [ 'default', 'phone', 'tablet' ],
+  pkgContextInfo: undefined,
+  ohPackagePathMap: {},
+  dependencyAliasMap: {},
+  permission: { requestPermissions: undefined, definePermissions: undefined },
+  useGetCurrentBundleName: false,
+  projectArkOption: undefined,
+  sourceMapDir: undefined,
+  branchElimination: false,
+  transformLib: undefined,
+  tsImportSendable: false,
+  resolveConflictMode: true,
+  depName2RootPath: {},
+  depName2DepInfo: {},
+  rootPathSet: [ 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts' ],
+  useNativeResolver: true,
+  shouldEmitJs: true,
+  useTscResolve: false,
+  singleFileEmit: false,
+  userProjectConfig: {
+    autoLazyImport: false,
+    allowEmptyBundleName: false,
+    reExportCheckMode: 'noCheck',
+    executionMode: 'memory',
+    usePathPlaceholder: false,
+    writeRollupCache: true,
+    isExpandImportEnabled: false,
+    expandImportExclude: '',
+    lazyImportExclude: '',
+    lazyImportInclude: '',
+    ignoreCrossplatformCheck: false,
+    isHarDeduplicateEnabled: false,
+    skipOhModulesLint: false,
+    enableStrictCheckOHModule: false,
+    disableSendableCheckRules: [],
+    useDeclarationFileSignature: false,
+    customizedOptions: undefined,
+    integratedHsp: false,
+    isPreloadSoEnabled: false
+  },
+  executionMode: 'memory',
+  arkCompileCachePath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule',
+  autoLazyFilter: undefined,
+  isHarDeduplicateEnabled: false,
+  intermediateHarDuplicateDirPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\intermediates\\har_duplicate\\default',
+  autoLazyImport: false,
+  allowEmptyBundleName: false,
+  reExportCheckMode: 'noCheck',
+  usePathPlaceholder: false,
+  writeRollupCache: true,
+  isExpandImportEnabled: false,
+  expandImportExclude: '',
+  lazyImportExclude: '',
+  lazyImportInclude: '',
+  ignoreCrossplatformCheck: false,
+  skipOhModulesLint: false,
+  enableStrictCheckOHModule: false,
+  disableSendableCheckRules: [],
+  useDeclarationFileSignature: false,
+  customizedOptions: undefined,
+  integratedHsp: false,
+  isPreloadSoEnabled: false,
+  strictMode: undefined,
+  useNormalizedOHMUrl: false,
+  caseSensitiveCheck: false,
+  aceModuleJsonPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\intermediates\\res\\default\\ark_module.json',
+  appResource: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\intermediates\\res\\default\\ResourceTable.txt',
+  rawFileResource: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\intermediates\\res\\default\\resources\\rawfile',
+  resourceTableHash: undefined,
+  runtimeOS: 'HarmonyOS',
+  sdkInfo: 'false:22:6.0.2.130:Release',
+  aceModuleRoot: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\src\\main\\ets',
+  compileMode: 'esmodule',
+  aceSuperVisualPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\src\\main\\supervisual',
+  aceBuildJson: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\intermediates\\loader\\default\\loader.json',
+  cachePath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule\\debug',
+  aceModuleBuild: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\intermediates\\loader_out\\default',
+  supportChunks: true,
+  declaredFilesPath: undefined,
+  shouldCollectDirectImportees: false,
+  isByteCodeHarOptimize: false,
+  expandImportPath: undefined,
+  pkgNameToPkgBriefInfo: {
+    '@unicodex/ucx': {
+      pkgRoot: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx',
+      originalSourceRoots: undefined,
+      sourceRoots: [Array],
+      pkgName: '@unicodex/ucx'
+    }
+  },
+  projectModel: {
+    'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\src\\main': {
+      moduleName: 'ucx',
+      modulePkgPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx',
+      belongProjectPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts'
+    },
+    'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx': {
+      moduleName: 'ucx',
+      modulePkgPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx',
+      belongProjectPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts'
+    },
+    'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts': {
+      moduleName: 'arkts',
+      modulePkgPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts',
+      belongProjectPath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts'
+    }
+  },
+  pkgJsonFileHash: '3549a7281edc1fa0ee03b12ed24c77a0d4604be33b9ee6d8af0b5da4dc9a41f5',
+  allModulePaths: [ 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx' ],
+  routerMap: {},
+  obfuscationOptions: undefined,
+  byteCodeHarToDependencyKeys: undefined,
+  compileBlockPkg: [],
+  mockParams: {
+    decorator: '@MockSetup',
+    packageName: '@ohos/hamock',
+    etsSourceRootPath: 'src/main/ets',
+    mockConfigPath: undefined,
+    mockConfigKey2ModuleInfo: {},
+    source2ModuleIdMap: {}
+  },
+  copyCodeResourceEnable: true,
+  copyCodeResourceExcludes: [],
+  copyCodeResourceIncludes: undefined,
+  uiTransformOptimization: false,
+  sdkPath: 'D:/Huawei/DevEco Studio/sdk',
+  needPreloadSoFileSet: {},
+  preloadSoFilePath: 'G:\\OpencodeProjects\\DanMoNovel\\Unicodex\\sdk\\arkts\\ucx\\build\\default\\intermediates\\preload\\default\\preload.json',
+  useSourceHash: false,
+  localModuleParamMap: {},
+  otherPaths: {
+    '@unicodex/ucx/*': [
+      '..\\*',
+      '..\\..\\..\\build\\default\\generated\\profile\\default\\*'
+    ]
+  },
+  collectImportersConfig: undefined,
+  byteCodeHar: false,
+  obfuscate: undefined,
+  skipBuildEnd: true
+}
+[2026-05-31T20:33:28.250] [INFO] debug-file - Finished :ucx:default@ConfigureCmake... after 1 ms 
+[2026-05-31T20:33:28.098] [DEBUG] debug-file - hvigorfile, resolve finished G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\hvigorfile.ts
+[2026-05-31T20:33:28.627] [DEBUG] debug-file - default@CacheNativeLibs work[2] is pushed to ready queue.
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[18] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.615] [DEBUG] debug-file - Compile arkts with external api path: D:\Huawei\DevEco Studio\sdk\default\hms\ets
+[2026-05-31T20:33:28.628] [DEBUG] debug-file - A work dispatched to worker[19] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[17] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.251] [DEBUG] debug-file - Executing task :ucx:default@MergeProfile
+[2026-05-31T20:33:28.616] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-31T20:33:28.628] [DEBUG] debug-file - A work dispatched to worker[18] failed because of worker busy.
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[16] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.251] [DEBUG] debug-file - Task 'ucx:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-05-31T20:33:28.616] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-31T20:33:28.628] [DEBUG] debug-file - Create  resident worker with id: 17.
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[15] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.252] [DEBUG] debug-file - Change app api release type with 'Release'
+[2026-05-31T20:33:28.629] [DEBUG] debug-file - default@CacheNativeLibs work[2] has been dispatched to worker[17].
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[14] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.252] [DEBUG] debug-file - Change app compile API version with '6.0.2.130'
+[2026-05-31T20:33:28.629] [DEBUG] debug-file - default@CacheNativeLibs work[2] is dispatched.
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[13] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.252] [DEBUG] debug-file - Change app target API version with '60002022'
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[12] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.629] [DEBUG] debug-file - ucx : default@CacheNativeLibs cost memory 0.15631103515625
+[2026-05-31T20:33:28.252] [DEBUG] debug-file - Change app minimum API version with '50000012'
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[11] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.252] [DEBUG] debug-file - Use cli appEnvironment
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[10] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.254] [DEBUG] debug-file - ucx : default@MergeProfile cost memory 0.1116485595703125
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[9] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.254] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 549 ms 
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[8] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.254] [INFO] debug-file - Finished :ucx:default@MergeProfile... after 3 ms 
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[6] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - A work dispatched to worker[5] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.621] [DEBUG] debug-file - Create  resident worker with id: 4.
+[2026-05-31T20:33:28.622] [DEBUG] debug-file - default@HarCompileArkTS work[0] has been dispatched to worker[4].
+[2026-05-31T20:33:28.622] [DEBUG] debug-file - default@HarCompileArkTS work[0] is dispatched.
+[2026-05-31T20:33:28.622] [DEBUG] debug-file - CopyResources startTime: 64520877173800
+[2026-05-31T20:33:28.622] [DEBUG] debug-file - default@HarCompileArkTS work[1] is submitted.
+[2026-05-31T20:33:28.622] [DEBUG] debug-file - default@HarCompileArkTS work[1] is pushed to ready queue.
+[2026-05-31T20:33:28.622] [DEBUG] debug-file - A work dispatched to worker[19] failed because unable to get work from ready queue.
+[2026-05-31T20:33:28.623] [DEBUG] debug-file - Create  resident worker with id: 18.
+[2026-05-31T20:33:28.623] [DEBUG] debug-file - default@HarCompileArkTS work[1] has been dispatched to worker[18].
+[2026-05-31T20:33:28.623] [DEBUG] debug-file - default@HarCompileArkTS work[1] is dispatched.
+[2026-05-31T20:33:28.623] [DEBUG] debug-file - ucx : default@HarCompileArkTS cost memory 2.79644775390625
+[2026-05-31T20:33:29.597] [DEBUG] debug-file - worker[18] has one work done.
+[2026-05-31T20:33:29.597] [DEBUG] debug-file - CopyResources is end, endTime: 64521851860700
+[2026-05-31T20:33:29.597] [DEBUG] debug-file - default@HarCompileArkTS work[1] done.
+[2026-05-31T20:33:29.597] [DEBUG] debug-file - A work dispatched to worker[18] failed because unable to get work from ready queue.
+[2026-05-31T20:33:29.663] [DEBUG] debug-file - worker[17] has one work done.
+[2026-05-31T20:33:29.663] [DEBUG] debug-file - default@CacheNativeLibs work[2] done.
+[2026-05-31T20:33:29.663] [DEBUG] debug-file - A work dispatched to worker[17] failed because unable to get work from ready queue.
+[2026-05-31T20:33:29.663] [INFO] debug-file - Finished :ucx:default@CacheNativeLibs... after 8 ms 
+[2026-05-31T20:33:36.141] [DEBUG] debug-file - worker[4] has one work error.
+[2026-05-31T20:33:36.142] [DEBUG] debug-file - Ark compile task finished.finished time is 64528396068600
+[2026-05-31T20:33:36.142] [DEBUG] debug-file - default@HarCompileArkTS work[0] failed.
+[2026-05-31T20:33:36.142] [ERROR] debug-file - Failed :ucx:default@HarCompileArkTS... 
+[2026-05-31T20:33:36.142] [WARN] debug-file - 
+[33m1 WARN: [33m[33mArkTS:WARN: For details about ArkTS syntax errors, see FAQs[39m[39m
+[33m2 WARN: [33m[33mArkTS:WARN File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:43:24
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33m3 WARN: [33m[33mArkTS:WARN File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:135:23
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[2026-05-31T20:33:36.142] [DEBUG] debug-file - hvigor build process will be closed with an error.
+[2026-05-31T20:33:36.143] [DEBUG] debug-file - ERROR: stacktrace = Error: ArkTS Compiler Error
+[31m1 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:35:5
+[39m
+[39m
+[31m2 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:35:42
+[39m
+[39m
+[31m3 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:43:5
+[39m
+[39m
+[31m4 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:43:52
+[39m
+[39m
+[31m5 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:51:5
+[39m
+[39m
+[31m6 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:51:47
+[39m
+[39m
+[31m7 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:59:5
+[39m
+[39m
+[31m8 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:59:44
+[39m
+[39m
+[31m9 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:67:5
+[39m
+[39m
+[31m10 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:67:50
+[39m
+[39m
+[31m11 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:81:5
+[39m
+[39m
+[31m12 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:81:49
+[39m
+[39m
+[31m13 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:89:5
+[39m
+[39m
+[31m14 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:89:41
+[39m
+[39m
+[31m15 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:207:11
+[39m
+[39m
+[31m16 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:209:13
+[39m
+[39m
+[31m17 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Type alias 'JsonValue' circularly references itself. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/types.ets:23:13
+[39m
+[39m
+[31m18 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Type alias 'JsonObject' circularly references itself. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/types.ets:32:13
+[39m
+[39m
+[31m19 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'openSync' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:207:21
+[39m
+[39m
+[31m20 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'OpenMode' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:207:39
+[39m
+[39m
+[31m21 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'statSync' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:209:23
+[39m
+[39m
+[31m22 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'readSync' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:212:34
+[39m
+[39m
+[31m23 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'closeSync' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:215:10
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:24 WARN:3}[39m
+    at runArkPack (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-compose\dist\src\arkts-pack.js:1:5736)
+ArkTSCompilerError: ArkTS Compiler Error
+    at throwArkTsCompilerError (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-compose\dist\src\data\compose-error.js:1:423)
+    at throwErrorIfHasErrorInfo (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-compose\dist\src\plugins\common-plugin.js:1:4478)
+    at Object.handler (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-compose\dist\src\plugins\common-plugin.js:1:2547)
+    at C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-base\node_modules\rollup\dist\shared\rollup.js:27765:40
+[2026-05-31T20:33:36.143] [ERROR] debug-file - Error: ArkTS Compiler Error
+[31m1 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:35:5
+[39m
+[39m
+[31m2 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:35:42
+[39m
+[39m
+[31m3 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:43:5
+[39m
+[39m
+[31m4 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:43:52
+[39m
+[39m
+[31m5 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:51:5
+[39m
+[39m
+[31m6 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:51:47
+[39m
+[39m
+[31m7 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:59:5
+[39m
+[39m
+[31m8 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:59:44
+[39m
+[39m
+[31m9 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:67:5
+[39m
+[39m
+[31m10 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:67:50
+[39m
+[39m
+[31m11 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:81:5
+[39m
+[39m
+[31m12 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:81:49
+[39m
+[39m
+[31m13 ERROR: [31m10605144 ArkTS Compiler Error
+Error Message: Usage of standard library is restricted (arkts-limited-stdlib) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:89:5
+[39m
+[39m
+[31m14 ERROR: [31m10605136 ArkTS Compiler Error
+Error Message: Prototype assignment is not supported (arkts-no-prototype-assignment) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/errors.ets:89:41
+[39m
+[39m
+[31m15 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:207:11
+[39m
+[39m
+[31m16 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:209:13
+[39m
+[39m
+[31m17 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Type alias 'JsonValue' circularly references itself. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/types.ets:23:13
+[39m
+[39m
+[31m18 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Type alias 'JsonObject' circularly references itself. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/types.ets:32:13
+[39m
+[39m
+[31m19 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'openSync' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:207:21
+[39m
+[39m
+[31m20 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'OpenMode' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:207:39
+[39m
+[39m
+[31m21 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'statSync' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:209:23
+[39m
+[39m
+[31m22 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'readSync' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:212:34
+[39m
+[39m
+[31m23 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'closeSync' does not exist on type 'typeof import("D:\\Huawei\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.fs")'. At File: G:/OpencodeProjects/DanMoNovel/Unicodex/sdk/arkts/ucx/src/main/ets/ucx/archive.ets:215:10
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:24 WARN:3}[39m
+    at runArkPack (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-compose\dist\src\arkts-pack.js:1:5736)
+ArkTSCompilerError: ArkTS Compiler Error
+    at throwArkTsCompilerError (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-compose\dist\src\data\compose-error.js:1:423)
+    at throwErrorIfHasErrorInfo (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-compose\dist\src\plugins\common-plugin.js:1:4478)
+    at Object.handler (C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-compose\dist\src\plugins\common-plugin.js:1:2547)
+    at C:\Users\MoYeR\.hvigor\project_caches\05eba13988aacb209170b11966312811\workspace\node_modules\.pnpm\@ohos+hvigor-ohos-plugin@6.22.3\node_modules\@ohos\hvigor-ohos-plugin\node_modules\@ohos\hvigor-arkts-base\node_modules\rollup\dist\shared\rollup.js:27765:40
+[2026-05-31T20:33:36.153] [ERROR] debug-file - BUILD FAILED in 10 s 448 ms 
+[2026-05-31T20:33:36.153] [DEBUG] debug-file - Update task ucx:default@PreBuild input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\AppScope\app.json5 cache by regenerate.
+[2026-05-31T20:33:36.154] [DEBUG] debug-file - Update task ucx:default@PreBuild input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\src\main\module.json5 cache by regenerate.
+[2026-05-31T20:33:36.154] [DEBUG] debug-file - Update task ucx:default@PreBuild input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5 cache by regenerate.
+[2026-05-31T20:33:36.155] [DEBUG] debug-file - Update task ucx:default@PreBuild input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build-profile.json5 cache by regenerate.
+[2026-05-31T20:33:36.155] [DEBUG] debug-file - Update task ucx:default@PreBuild input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\hvigor\hvigor-config.json5 cache by regenerate.
+[2026-05-31T20:33:36.155] [DEBUG] debug-file - Update task ucx:default@PreBuild input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\oh-package.json5 cache by regenerate.
+[2026-05-31T20:33:36.155] [DEBUG] debug-file - Update task ucx:default@PreBuild input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\oh-package.json5 cache by regenerate.
+[2026-05-31T20:33:36.156] [DEBUG] debug-file - Incremental task ucx:default@PreBuild post-execution cost:3 ms .
+[2026-05-31T20:33:36.156] [DEBUG] debug-file - Update task ucx:default@CreateHarBuildProfile input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\AppScope\app.json5 cache by regenerate.
+[2026-05-31T20:33:36.156] [DEBUG] debug-file - Update task ucx:default@CreateHarBuildProfile input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5 cache by regenerate.
+[2026-05-31T20:33:36.156] [DEBUG] debug-file - Update task ucx:default@CreateHarBuildProfile output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\BuildProfile.ets cache.
+[2026-05-31T20:33:36.156] [DEBUG] debug-file - Incremental task ucx:default@CreateHarBuildProfile post-execution cost:1 ms .
+[2026-05-31T20:33:36.156] [DEBUG] debug-file - Update task ucx:default@CreateHarModuleInfo output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\generated\profile\default\ModuleInfo.ts cache.
+[2026-05-31T20:33:36.157] [DEBUG] debug-file - Incremental task ucx:default@CreateHarModuleInfo post-execution cost:1 ms .
+[2026-05-31T20:33:36.157] [DEBUG] debug-file - Update task ucx:default@MergeProfile input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\AppScope\app.json5 cache by regenerate.
+[2026-05-31T20:33:36.157] [DEBUG] debug-file - Update task ucx:default@MergeProfile input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5 cache by regenerate.
+[2026-05-31T20:33:36.157] [DEBUG] debug-file - Update task ucx:default@MergeProfile input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\src\main\module.json5 cache by regenerate.
+[2026-05-31T20:33:36.157] [DEBUG] debug-file - Update task ucx:default@MergeProfile output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\merge_profile\default\module.json cache.
+[2026-05-31T20:33:36.157] [DEBUG] debug-file - Incremental task ucx:default@MergeProfile post-execution cost:1 ms .
+[2026-05-31T20:33:36.157] [DEBUG] debug-file - Update task ucx:default@GeneratePkgContextInfo output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2026-05-31T20:33:36.157] [DEBUG] debug-file - Incremental task ucx:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2026-05-31T20:33:36.157] [DEBUG] debug-file - Update task ucx:default@ProcessIntegratedHsp output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Incremental task ucx:default@ProcessIntegratedHsp post-execution cost:1 ms .
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Update task ucx:default@ProcessModulePrivacyProfile output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\privacy_profile\default\pac.json5 cache.
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Incremental task ucx:default@ProcessModulePrivacyProfile post-execution cost:1 ms .
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Update task ucx:default@ProcessProfile input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\merge_profile\default\module.json cache by regenerate.
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Update task ucx:default@ProcessProfile output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\process_profile\default\module.json cache.
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Incremental task ucx:default@ProcessProfile post-execution cost:1 ms .
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Update task ucx:default@ProcessRouterMap input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\oh-package.json5 cache by regenerate.
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Update task ucx:default@ProcessRouterMap input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\oh-package.json5 cache by regenerate.
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Update task ucx:default@ProcessRouterMap input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\src\main\module.json5 cache by regenerate.
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Update task ucx:default@ProcessRouterMap output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\router_map\default\temp-router-map.json cache.
+[2026-05-31T20:33:36.158] [DEBUG] debug-file - Update task ucx:default@ProcessRouterMap output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\router_map\default\loader-router-map.json cache.
+[2026-05-31T20:33:36.159] [DEBUG] debug-file - Incremental task ucx:default@ProcessRouterMap post-execution cost:1 ms .
+[2026-05-31T20:33:36.159] [DEBUG] debug-file - Update task ucx:default@ProcessShareConfig input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\oh-package.json5 cache by regenerate.
+[2026-05-31T20:33:36.159] [DEBUG] debug-file - Update task ucx:default@ProcessShareConfig input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\oh-package.json5 cache by regenerate.
+[2026-05-31T20:33:36.159] [DEBUG] debug-file - Update task ucx:default@ProcessShareConfig input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\src\main\module.json5 cache by regenerate.
+[2026-05-31T20:33:36.159] [DEBUG] debug-file - Update task ucx:default@ProcessShareConfig output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\share_config\default\temp-share-config.json cache.
+[2026-05-31T20:33:36.159] [DEBUG] debug-file - Incremental task ucx:default@ProcessShareConfig post-execution cost:1 ms .
+[2026-05-31T20:33:36.159] [DEBUG] debug-file - Update task ucx:default@ProcessStartupConfig output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\startup\default\startup_config.json cache.
+[2026-05-31T20:33:36.159] [DEBUG] debug-file - Incremental task ucx:default@ProcessStartupConfig post-execution cost:1 ms .
+[2026-05-31T20:33:36.159] [DEBUG] debug-file - Update task ucx:default@ProcessResource output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\res\default\resConfig.json cache.
+[2026-05-31T20:33:36.160] [DEBUG] debug-file - Update task ucx:default@ProcessResource output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\res\default\opt-compression.json cache.
+[2026-05-31T20:33:36.160] [DEBUG] debug-file - Incremental task ucx:default@ProcessResource post-execution cost:1 ms .
+[2026-05-31T20:33:36.160] [DEBUG] debug-file - Update task ucx:default@GenerateLoaderJson input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\src\main\ets cache by regenerate.
+[2026-05-31T20:33:36.172] [DEBUG] debug-file - Update task ucx:default@GenerateLoaderJson output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\loader\default\loader.json cache.
+[2026-05-31T20:33:36.172] [DEBUG] debug-file - Incremental task ucx:default@GenerateLoaderJson post-execution cost:13 ms .
+[2026-05-31T20:33:36.172] [DEBUG] debug-file - Update task ucx:default@ProcessLibs input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\build-profile.json5 cache by regenerate.
+[2026-05-31T20:33:36.172] [DEBUG] debug-file - Update task ucx:default@ProcessLibs input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build-profile.json5 cache by regenerate.
+[2026-05-31T20:33:36.172] [DEBUG] debug-file - Update task ucx:default@ProcessLibs output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\libs\default cache.
+[2026-05-31T20:33:36.173] [DEBUG] debug-file - Incremental task ucx:default@ProcessLibs post-execution cost:1 ms .
+[2026-05-31T20:33:36.173] [DEBUG] debug-file - Update task ucx:default@CompileResource input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\process_profile\default\module.json cache by regenerate.
+[2026-05-31T20:33:36.173] [DEBUG] debug-file - Update task ucx:default@CompileResource input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\res\default\resConfig.json cache by regenerate.
+[2026-05-31T20:33:36.173] [DEBUG] debug-file - Update task ucx:default@CompileResource output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\res\default cache.
+[2026-05-31T20:33:36.173] [DEBUG] debug-file - Update task ucx:default@CompileResource output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\generated\r\default\ResourceTable.h cache.
+[2026-05-31T20:33:36.174] [DEBUG] debug-file - Update task ucx:default@CompileResource output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\generated\r\default cache.
+[2026-05-31T20:33:36.174] [DEBUG] debug-file - Incremental task ucx:default@CompileResource post-execution cost:2 ms .
+[2026-05-31T20:33:36.174] [DEBUG] debug-file - Update task ucx:default@DoNativeStrip input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\libs\default cache by regenerate.
+[2026-05-31T20:33:36.174] [DEBUG] debug-file - Update task ucx:default@DoNativeStrip output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\stripped_native_libs\default cache.
+[2026-05-31T20:33:36.174] [DEBUG] debug-file - Incremental task ucx:default@DoNativeStrip post-execution cost:1 ms .
+[2026-05-31T20:33:36.175] [DEBUG] debug-file - Update task ucx:default@HarCompileArkTS input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\loader\default cache by regenerate.
+[2026-05-31T20:33:36.175] [DEBUG] debug-file - Update task ucx:default@HarCompileArkTS input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\res\default\ark_module.json cache by regenerate.
+[2026-05-31T20:33:36.175] [DEBUG] debug-file - Update task ucx:default@HarCompileArkTS input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\src\main\ets cache by regenerate.
+[2026-05-31T20:33:36.177] [DEBUG] debug-file - Update task ucx:default@HarCompileArkTS input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\src\main\ets\ucx\Index.ets cache by regenerate.
+[2026-05-31T20:33:36.177] [DEBUG] debug-file - Update task ucx:default@HarCompileArkTS input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\BuildProfile.ets cache by regenerate.
+[2026-05-31T20:33:36.177] [DEBUG] debug-file - Update task ucx:default@HarCompileArkTS output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\loader_out\default cache.
+[2026-05-31T20:33:36.177] [DEBUG] debug-file - Incremental task ucx:default@HarCompileArkTS post-execution cost:4 ms .
+[2026-05-31T20:33:36.177] [DEBUG] debug-file - Update task ucx:default@CacheNativeLibs input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\stripped_native_libs\default cache by regenerate.
+[2026-05-31T20:33:36.177] [DEBUG] debug-file - Update task ucx:default@CacheNativeLibs input file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\libs\default cache by regenerate.
+[2026-05-31T20:33:36.178] [DEBUG] debug-file - Update task ucx:default@CacheNativeLibs output file:G:\OpencodeProjects\DanMoNovel\Unicodex\sdk\arkts\ucx\build\default\intermediates\patch\default\base_native_libs.json cache.
+[2026-05-31T20:33:36.178] [DEBUG] debug-file - Incremental task ucx:default@CacheNativeLibs post-execution cost:1 ms .
+[2026-05-31T20:33:36.195] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2026-05-31T20:33:36.195] [DEBUG] debug-file - Clear worker 0.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Worker 0 has been cleared.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current idle worker size: 4.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Clear worker 1.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Worker 1 has been cleared.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current idle worker size: 3.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Clear worker 18.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Worker 18 has been cleared.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current idle worker size: 2.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Clear worker 17.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Worker 17 has been cleared.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Clear worker 4.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Worker 4 has been cleared.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - Current busy worker size: 0.
+[2026-05-31T20:33:36.196] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-31T20:33:36.200] [DEBUG] debug-file - Current worker pool is terminated.
+[2026-05-31T20:33:36.202] [DEBUG] debug-file - worker[0] exits with exit code 1.
+[2026-05-31T20:33:36.202] [DEBUG] debug-file - worker[1] exits with exit code 1.
+[2026-05-31T20:33:36.207] [DEBUG] debug-file - worker[18] exits with exit code 1.
+[2026-05-31T20:33:36.209] [DEBUG] debug-file - worker[17] exits with exit code 1.
+[2026-05-31T20:33:36.231] [DEBUG] debug-file - worker[4] exits with exit code 1.

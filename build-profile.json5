@@ -1,0 +1,31 @@
+{
+  // 项目级构建配置 / Project-level build profile
+  // 本项目为单模块 HAR 库，仅包含一个 library 模块（当前目录 "."）。
+  // This project is a single-module HAR library, containing only one library module (current directory ".").
+  "app": {
+    "products": [
+      {
+        // 默认产品配置 / Default product configuration
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.0(12)",
+        "runtimeOS": "HarmonyOS"
+      }
+    ]
+  },
+  "modules": [
+    {
+      // 指向 ucx 子目录的 HAR 库模块 / Points to the HAR library module in ucx subdirectory
+      "name": "ucx",
+      "srcPath": "./ucx",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  // hvigor 构建工具配置 / Hvigor build tool configuration
+  // modelVersion: hvigor 引擎版本 / hvigor engine version
+  // dependencies: 构建插件版本 / build plugin versions
+  "modelVersion": "5.0.0",
+  "dependencies": {
+    "@ohos/hvigor-ohos-plugin": "6.22.3"
+  }
+}

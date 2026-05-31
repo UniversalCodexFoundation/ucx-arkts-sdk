@@ -1,0 +1,14 @@
+{
+  // 模块声明 / Module declaration
+  // 定义本模块名称、类型（har = 共享库）及支持的设备类型。
+  // Defines module name, type (har = shared library), and supported device types.
+  "module": {
+    "name": "ucx",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "phone",
+      "tablet"
+    ]
+  }
+}

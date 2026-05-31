@@ -1,0 +1,13 @@
+{
+  // 模块级构建配置 / Module-level build profile
+  // 定义本 HAR 模块的 API 模式和构建目标。
+  // Defines the API mode and build targets for this HAR module.
+  "apiType": "stageMode",
+  "targets": [
+    {
+      // 默认构建目标 / Default build target
+      "name": "default",
+      "runtimeOS": "HarmonyOS"
+    }
+  ]
+}

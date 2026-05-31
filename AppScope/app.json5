@@ -1,0 +1,15 @@
+{
+  // Unicodex UCX ArkTS SDK -- HarmonyOS application scope configuration
+  // 应用级配置（HAR 库构建所需的最小 AppScope 元数据）
+  "app": {
+    "bundleName": "com.unicodex.ucx",
+    "vendor": "Unicodex Team",
+    "versionCode": 40000,
+    "versionName": "0.4.0",
+    "icon": "$media:app_icon",
+    "label": "$string:app_name",
+    "minAPIVersion": 12,
+    "targetAPIVersion": 12,
+    "apiReleaseType": "Release1"
+  }
+}

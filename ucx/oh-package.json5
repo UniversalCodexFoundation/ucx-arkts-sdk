@@ -1,0 +1,29 @@
+{
+  // Unicodex UCX ArkTS SDK -- 模块级包清单 / Module-level package manifest
+  //
+  // 本文件位于 ucx/ 子目录，是 HAR 模块的 oh-package.json5。
+  // main / types 入口指向模块内相对路径的公开 API 统一导出 Index.ets。
+  // This file resides in the ucx/ subdirectory and serves as the HAR module's oh-package.json5.
+  // main / types entries point to the module-relative path of the public API barrel file Index.ets.
+  name: "@unicodex/ucx",
+  version: "0.4.0",
+  description: "Unicodex UCX -- ArkTS HAR module",
+  main: "src/main/ets/ucx/Index.ets",
+  types: "src/main/ets/ucx/Index.ets",
+  author: "Unicodex Team",
+  license: "MIT OR Apache-2.0",
+  keywords: [
+    "unicodex",
+    "ucx",
+    "ebook",
+    "novel",
+    "ed25519",
+    "blake3",
+    "argon2id",
+    "aes-gcm",
+    "chacha20-poly1305",
+    "harmonyos",
+    "arkts"
+  ],
+  dependencies: {}
+}

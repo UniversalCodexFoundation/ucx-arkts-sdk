@@ -1,0 +1,157 @@
+{
+  "HVIGOR_OHOS_PLUGIN": {
+    "MODULES": [
+      {
+        "MODULE_NAME": "d91d2814cf95c7727195fa7c703262369b0d76dcb00885b341b846aec6503a39",
+        "API_TYPE": "stageMode",
+        "INCLUDE_IN_BUILD": true,
+        "IS_COMMAND_LINE_ENTRY_MODULE": false,
+        "MODULE_TYPE": "har",
+        "INCREMENTAL_TASKS": {
+          "COMPILE_ARKTS": false
+        },
+        "IS_INCREMENTAL_MODULE": false
+      }
+    ],
+    "NATIVE_COMPILER": "Default",
+    "IS_FULL_BUILD": true,
+    "BUILD_MODE": "debug"
+  },
+  "HVIGOR": {
+    "IS_INCREMENTAL": true,
+    "IS_DAEMON": false,
+    "IS_PARALLEL": true,
+    "IS_HVIGORFILE_TYPE_CHECK": false,
+    "TASK_TIME": {
+      "d91d2814cf95c7727195fa7c703262369b0d76dcb00885b341b846aec6503a39": {
+        "clean": 1796800,
+        "PreBuild": 111353200,
+        "ProcessOHPackageJson": 2342200,
+        "CreateHarBuildProfile": 5832200,
+        "CreateHarModuleInfo": 622700,
+        "ConfigureCmake": 229100,
+        "MergeProfile": 3020500,
+        "GeneratePkgContextInfo": 6388000,
+        "ProcessIntegratedHsp": 548000,
+        "ProcessModulePrivacyProfile": 515800,
+        "BuildNativeWithCmake": 189500,
+        "ProcessProfile": 273130100,
+        "ProcessRouterMap": 1402600,
+        "ProcessShareConfig": 868200,
+        "ProcessStartupConfig": 1103600,
+        "BuildNativeWithNinja": 1683000,
+        "ProcessResource": 4331300,
+        "GenerateLoaderJson": 13377400,
+        "ProcessLibs": 5795700,
+        "CompileResource": 1814100,
+        "DoNativeStrip": 5461800,
+        "ProcessObfuscationFiles": 230000,
+        "CacheNativeLibs": 1036963000
+      }
+    },
+    "APIS": [
+      "getProperty"
+    ],
+    "CONFIG_EXPERIMENT": {
+      "ENABLE_MODULE_SKIP": false,
+      "ENABLE_CPP_FUNCTION_LEVEL_INCREMENTAL": false
+    },
+    "CONFIG_PROPERTIES": {},
+    "BUILD_ID": "202605312033257040",
+    "ERROR_MESSAGE": [
+      {
+        "CODE": "10605144",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605136",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605144",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605136",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605144",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605136",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605144",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605136",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605144",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605136",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605144",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605136",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605144",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605136",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605008",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10605008",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10505001",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10505001",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10505001",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10505001",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10505001",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10505001",
+        "TIMESTAMP": "1780230816143"
+      },
+      {
+        "CODE": "10505001",
+        "TIMESTAMP": "1780230816143"
+      }
+    ],
+    "TOTAL_TIME": 10447056500
+  }
+}
