@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * kdf.ets —— KDF 调度（Key Derivation Function dispatch），对应 UCX-FORMAT §7.4 / §8。
  *

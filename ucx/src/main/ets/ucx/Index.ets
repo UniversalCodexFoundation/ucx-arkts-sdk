@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * Index.ets —— Unicodex UCX ArkTS SDK 的公开 API 统一导出入口。
  *

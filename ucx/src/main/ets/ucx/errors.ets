@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * errors.ets —— 统一错误模型（Error Model），对应 SDK-API.md §5。
  *

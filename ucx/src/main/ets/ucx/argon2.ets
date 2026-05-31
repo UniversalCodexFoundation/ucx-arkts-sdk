@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * argon2.ets —— 纯 ArkTS 实现的 Argon2id（RFC 9106），含其依赖的 BLAKE2b。
  *

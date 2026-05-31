@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * aes.ets —— 纯 ArkTS 实现的 AES-256 分组密码 + GCM + CBC 模式。
  *

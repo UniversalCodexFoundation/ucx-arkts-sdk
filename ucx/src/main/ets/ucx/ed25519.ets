@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * ed25519.ets —— 纯 ArkTS 实现的 Ed25519 签名验证（RFC 8032），含其依赖的 SHA-512。
  *

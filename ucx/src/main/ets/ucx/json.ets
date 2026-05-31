@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * json.ets —— 自带的最小 JSON 解析器，返回强类型 JsonValue（避免 ArkTS 对
  * 平台 JSON.parse 返回类型的处理摩擦，并保证宽松反序列化的确定行为）。

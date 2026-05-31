@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * inflate.ets —— 纯 ArkTS 实现的 raw DEFLATE 解压（RFC 1951）。
  *

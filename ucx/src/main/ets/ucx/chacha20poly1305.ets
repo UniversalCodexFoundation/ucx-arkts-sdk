@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * chacha20poly1305.ets —— 纯 ArkTS 实现的 ChaCha20-Poly1305 AEAD（RFC 8439）。
  *

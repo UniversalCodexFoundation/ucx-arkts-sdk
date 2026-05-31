@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * verify.ets —— 双层签名验证编排 + 状态机（UCX-FORMAT §6）。
  *

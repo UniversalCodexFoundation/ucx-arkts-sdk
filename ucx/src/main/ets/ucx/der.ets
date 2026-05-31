@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * der.ets —— 最小 X.509 / DER 解析（仅取 UCX 验签所需字段）。
  *

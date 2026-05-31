@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * archive.ets —— 主门面 UcxArchive 与模块级便捷函数（SDK-API.md §4）。
  *

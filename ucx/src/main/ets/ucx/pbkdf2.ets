@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * pbkdf2.ets —— 纯 ArkTS 实现的 PBKDF2-HMAC-SHA256（RFC 2898 / RFC 8018）。
  *

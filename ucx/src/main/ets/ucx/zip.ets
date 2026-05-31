@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * zip.ets —— 最小 ZIP 容器读取（自带，不依赖 @ohos.zlib）。
  *

@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * sha256.ets —— 纯 ArkTS 实现的 SHA-256 与 HMAC-SHA256（FIPS 180-4 / RFC 2104）。
  *

@@ -16,7 +16,7 @@
   main: "src/main/ets/ucx/Index.ets",
   types: "src/main/ets/ucx/Index.ets",
   author: "Unicodex Team",
-  license: "MIT OR Apache-2.0",
+  license: "MIT",
   keywords: [
     "unicodex",
     "ucx",

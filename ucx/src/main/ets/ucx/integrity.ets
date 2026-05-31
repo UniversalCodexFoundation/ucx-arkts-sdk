@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * integrity.ets —— BLAKE3 完整性校验（UCX-FORMAT §5）。
  *

@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * cbc.ets —— AES-256-CBC + HMAC-SHA256（Encrypt-then-MAC, EtM）+ PKCS#7 解密。
  *

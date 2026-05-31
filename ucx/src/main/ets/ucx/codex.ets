@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * codex.ets —— metadata/codex.json 与 content/struct.json 的 JSON 映射（UCX-FORMAT §4）。
  *

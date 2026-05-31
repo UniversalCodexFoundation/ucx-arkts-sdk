@@ -190,5 +190,5 @@ node scripts/verify-signatures.cjs
 
 ## 许可
 
-`MIT OR Apache-2.0`（与父 Unicodex 项目一致，双许可可分别物化为 `LICENSE-MIT` / `LICENSE-APACHE`）。
+`MIT`（与父 Unicodex 项目一致，双许可可分别物化为 `LICENSE-MIT` / `LICENSE-APACHE`）。
 见 [LICENSE](./LICENSE)。

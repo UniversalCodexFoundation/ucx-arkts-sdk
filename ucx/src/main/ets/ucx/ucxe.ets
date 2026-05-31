@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * ucxe.ets —— UCXE 加密容器头部解析 + 解密编排（UCX-FORMAT §7）。
  *

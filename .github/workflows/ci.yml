@@ -1,0 +1,60 @@
+# =============================================================================
+# Unicodex ArkTS SDK -- CI Workflow
+# Unicodex ArkTS SDK -- CI 工作流
+#
+# This workflow runs Node.js compatibility tests for the ArkTS SDK.
+# 该工作流为 ArkTS SDK 运行 Node.js 兼容性测试。
+#
+# NOTE: Full HAR build requires DevEco Studio / hvigor, not available in GitHub Actions.
+# 注意：完整的 HAR 构建需要 DevEco Studio / hvigor，GitHub Actions 中不可用。
+# =============================================================================
+
+name: CI
+
+# Trigger on push and pull request to main/master branches.
+# 在推送和拉取请求到 main/master 分支时触发。
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+# Read-only permissions for repository contents.
+# 仓库内容的只读权限。
+permissions:
+  contents: read
+
+# Cancel any in-progress CI runs for the same ref to save resources.
+# 取消同一 ref 上正在进行的 CI 运行以节约资源。
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # test -- Run Node.js compatibility tests
+  # test -- 运行 Node.js 兼容性测试
+  # ---------------------------------------------------------------------------
+  test:
+    name: Node.js Compatibility Tests / Node.js 兼容性测试
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository code.
+      # 检出仓库代码。
+      - name: Checkout repository / 检出仓库
+        uses: actions/checkout@v6
+
+      # Set up Node.js 22 for running tests.
+      # 安装 Node.js 22 用于运行测试。
+      - name: Setup Node.js / 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Run the ArkTS SDK test suite via Node.js.
+      # 通过 Node.js 运行 ArkTS SDK 测试套件。
+      # NOTE: Full HAR build requires DevEco Studio / hvigor, not available in GitHub Actions.
+      # 注意：完整的 HAR 构建需要 DevEco Studio / hvigor，GitHub Actions 中不可用。
+      - name: Run tests / 运行测试
+        run: node tests/run.cjs

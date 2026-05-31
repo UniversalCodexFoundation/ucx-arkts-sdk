@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * types.ets —— 数据模型（Data Model），对应 SDK-API.md §3。
  *

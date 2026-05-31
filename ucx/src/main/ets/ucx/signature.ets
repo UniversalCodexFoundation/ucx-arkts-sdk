@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * signature.ets —— 双层签名的二进制结构解析与摘要计算（UCX-FORMAT §6）。
  *

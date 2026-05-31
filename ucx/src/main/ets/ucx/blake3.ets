@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: MIT OR Apache-2.0
+ * SPDX-License-Identifier: MIT
  *
  * blake3.ets —— 纯 ArkTS 实现的 BLAKE3 加密哈希（仅默认 hash 模式，32 字节输出）。
  *
