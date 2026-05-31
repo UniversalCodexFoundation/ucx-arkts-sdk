@@ -10,7 +10,7 @@
  * 不泄露具体失败原因（防 padding/auth oracle，对齐参考实现
  * ucx-crypto/src/lib.rs:138-152）。I/O 错误可以透传为 IoError。
  *
- * ArkTS 注意：Error 子类需正确设置原型链；与 TS 一致用 Object.setPrototypeOf。
+ * ArkTS 注意：class extends 原生维护原型链，无需 Object.setPrototypeOf。
  */
 
 /** SDK-API.md §5 的稳定错误类别名（跨语言一致）。 */
@@ -31,8 +31,6 @@ export class UcxError extends Error {
     super(message);
     this.name = `UcxError(${category})`;
     this.category = category;
-    // 维持原型链（ArkTS / TS 编译到旧目标时的惯例修正）。
-    Object.setPrototypeOf(this, UcxError.prototype);
   }
 }
 
@@ -40,7 +38,6 @@ export class UcxError extends Error {
 export class InvalidFormatError extends UcxError {
   constructor(message: string) {
     super('InvalidFormat', message);
-    Object.setPrototypeOf(this, InvalidFormatError.prototype);
   }
 }
 
@@ -48,7 +45,6 @@ export class InvalidFormatError extends UcxError {
 export class NotFoundError extends UcxError {
   constructor(message: string) {
     super('NotFound', message);
-    Object.setPrototypeOf(this, NotFoundError.prototype);
   }
 }
 
@@ -56,7 +52,6 @@ export class NotFoundError extends UcxError {
 export class ParseError extends UcxError {
   constructor(message: string) {
     super('ParseError', message);
-    Object.setPrototypeOf(this, ParseError.prototype);
   }
 }
 
@@ -64,7 +59,6 @@ export class ParseError extends UcxError {
 export class UnsupportedError extends UcxError {
   constructor(message: string) {
     super('Unsupported', message);
-    Object.setPrototypeOf(this, UnsupportedError.prototype);
   }
 }
 
@@ -78,7 +72,6 @@ export class DecryptionError extends UcxError {
   constructor() {
     // 固定、不透明的文案。
     super('DecryptionError', 'decryption failed');
-    Object.setPrototypeOf(this, DecryptionError.prototype);
   }
 }
 
@@ -86,6 +79,5 @@ export class DecryptionError extends UcxError {
 export class IoError extends UcxError {
   constructor(message: string) {
     super('IoError', message);
-    Object.setPrototypeOf(this, IoError.prototype);
   }
 }

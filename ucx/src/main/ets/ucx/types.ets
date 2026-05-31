@@ -9,24 +9,21 @@
  *
  * 解析永不失败于未知字段：缺失可选字段为 undefined，不报错（见 codex.ets）。
  *
- * ArkTS 约束：禁用 any/unknown。JSON 的“任意值”用显式的 JsonValue 递归联合类型
- * 表达；对象用 JsonObject（= Record<string, JsonValue>），数组用 JsonValue[]。
+ * ArkTS 约束：禁用 any/unknown；类型别名禁止循环引用。
+ * JSON 的”任意值”用 Object | null 表达（ArkTS 的 Object 涵盖 string/number/boolean/Array/Record 等全部非 null 值）。
+ * 对象用 JsonObject（= Record<string, JsonValue>），数组用 (Object | null)[]。
+ * 运行时类型检查由 codex.ets 的守卫函数（typeof / Array.isArray）保证安全。
  */
 
 // ── JSON 值的静态类型表达（替代 TS 的 unknown）─────────────────────────────
 
 /**
- * 任意 JSON 值的静态联合类型。
- * 由于 ArkTS 不允许 any/unknown，我们用该递归联合刻画 JSON 取值空间。
- * 注意：ArkTS 支持递归类型别名与联合类型。
+ * 任意 JSON 值的静态类型。
+ * ArkTS 不允许递归类型别名（JsonValue[] / JsonObject 会形成循环引用），
+ * 因此用 Object | null 替代递归联合：Object 涵盖 string / number / boolean /
+ * Array / Record 等全部非 null JSON 值。
  */
-export type JsonValue =
-  | null
-  | boolean
-  | number
-  | string
-  | JsonValue[]
-  | JsonObject;
+export type JsonValue = Object | null;
 
 /** JSON 对象（字符串键到 JsonValue 的映射）。 */
 export type JsonObject = Record<string, JsonValue>;

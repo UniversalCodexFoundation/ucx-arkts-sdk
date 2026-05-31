@@ -15,8 +15,8 @@
  * → 解析 codex.json / struct.json / MANIFEST.MF。失败抛 InvalidFormat / ParseError。
  *
  * ArkTS 注意：禁 any；解密失败统一折叠为 DecryptionError（不透明，防 oracle）。
- *   open() 因依赖文件系统 I/O（@ohos.file.fs）而以 HarmonyOS 运行时为前提；openBytes()
- *   则纯内存、可在任意 ArkTS 运行时工作（推荐在测试 / 非 HarmonyOS 环境用 openBytes）。
+ *   open() 依赖 @ohos.file.fs 静态导入（HAR 编译必需），以 HarmonyOS 运行时为前提；
+ *   openBytes() 则纯内存、可在任意 ArkTS 运行时工作（推荐在测试 / 非 HarmonyOS 环境用 openBytes）。
  */
 
 import {
@@ -36,6 +36,7 @@ import {
   decryptWithPassphrase as decryptWithPassphraseImpl,
 } from './ucxe';
 import { utf8Decode } from './util';
+import fileIo from '@ohos.file.fs';
 
 /** 读字节为 UcxArchive 的内部公共逻辑。 */
 function buildArchive(data: Uint8Array, filePath: string | undefined): UcxArchive {
@@ -193,26 +194,23 @@ export function openBytes(data: Uint8Array): UcxArchive {
 /**
  * 从文件路径打开 UCX 归档（需 HarmonyOS 运行时的 @ohos.file.fs）。
  *
- * 注意：本函数依赖 HarmonyOS 文件系统 API；为保持本 SDK「纯 ArkTS、可在任意运行时工作」的
- * 卖点，文件读取通过动态 import 隔离。若运行环境无 @ohos.file.fs（如纯 ArkTS 测试 / Node），
- * 请改用 openBytes()。
+ * 注意：本函数通过静态导入依赖 HarmonyOS 文件系统 API（@ohos.file.fs）。
+ * 若运行环境无 @ohos.file.fs（如纯 ArkTS 测试 / Node），请改用 openBytes()。
  *
  * @throws IoError 读取失败；其余同 openBytes。
  */
 export async function open(path: string): Promise<UcxArchive> {
   let bytes: Uint8Array;
   try {
-    // 动态 import HarmonyOS 文件系统，避免在非 HarmonyOS 环境下静态依赖。
-    const fs = await import('@ohos.file.fs');
-    const file = fs.openSync(path, fs.OpenMode.READ_ONLY);
+    const file = fileIo.openSync(path, fileIo.OpenMode.READ_ONLY);
     try {
-      const stat = fs.statSync(file.fd);
+      const stat = fileIo.statSync(file.fd);
       const size: number = stat.size;
       const buffer: ArrayBuffer = new ArrayBuffer(size);
-      const readLen: number = fs.readSync(file.fd, buffer);
+      const readLen: number = fileIo.readSync(file.fd, buffer);
       bytes = new Uint8Array(buffer).subarray(0, readLen);
     } finally {
-      fs.closeSync(file);
+      fileIo.closeSync(file);
     }
   } catch (e) {
     const msg: string = e instanceof Error ? e.message : 'unknown error';
